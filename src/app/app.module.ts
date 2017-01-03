@@ -9,13 +9,15 @@ import { NavigationComponent } from './navigation/navigation.component';
 import {AppsService} from "./apps.service";
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from "./app.routing.module";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppCardComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -11,9 +11,11 @@ export class HomeComponent implements OnInit {
   public apps: Array<any>;
   public loading: boolean;
   public hasError: boolean;
+  public appFilter: string;
   constructor(private appService: AppsService) {
     this.loading = true;
     this.hasError = false;
+    this.appFilter = '';
   }
 
   ngOnInit() {
