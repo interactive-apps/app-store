@@ -4,26 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AppCardComponent } from './app-card/app-card.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {AppsService} from "./apps.service";
-import { HomeComponent } from './home/home.component';
-import {AppRoutingModule} from "./app.routing.module";
 import { FilterPipe } from './filter.pipe';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppCardComponent,
     NavigationComponent,
-    HomeComponent,
-    FilterPipe
+    FilterPipe,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AppRoutingModule
+    HttpModule
   ],
   providers: [AppsService],
   bootstrap: [AppComponent]

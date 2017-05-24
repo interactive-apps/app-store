@@ -1,10 +1,10 @@
-import { PlaystorePage } from './app.po';
+import { AppStore2Page } from './app.po';
 
-describe('playstore App', function() {
-  let page: PlaystorePage;
+describe('app-store2 App', () => {
+  let page: AppStore2Page;
 
   beforeEach(() => {
-    page = new PlaystorePage();
+    page = new AppStore2Page();
   });
 
   it('should display message saying app works', () => {
