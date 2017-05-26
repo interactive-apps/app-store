@@ -50,15 +50,15 @@
   },
 
   {
-    "id": "dhis2_touch",
-    "name": "DHIS 2 Touch",
+    "id": "hisptz_touch",
+    "name": "HISPTZ Touch",
     "version": "2.0",
     "compatibility": "",
     "revision": "e70f0",
     "logo_url": "assets/img/products/dhis2touch.png",
     "cover_url": "assets/img/products/dhis2touch-cover.png",
     "github_url" : "https://github.com/hisptz/dhis-2-touch.git",
-    "download_url": "assets/apps/zip/dhis_2_touch.apk",
+    "download_url": "https://play.google.com/store/apps/details?id=com.hipstz.dhis2.dhis2touch",
     "short_description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone",
     "description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone, that aims to ship full dhis2 web experience completely offline on your smartphone. Among it's already completed features includes:",
     "features": ["Support for off-line aggregate data entry","Support for off-line standard reports","Extremely lightweight and compatible with widest range of smartphone devices"
