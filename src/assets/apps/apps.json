@@ -83,7 +83,7 @@
     "id": "score_card_widget",
     "name": "Interactive Score Card Widget",
     "version": "1.0",
-    "compatibility": "",
+    "compatibility": "24, 25 and 26",
     "revision": "fc8f",
     "logo_url": "assets/img/products/score-card-widget.png",
     "cover_url": "assets/img/products/score-card-widget-cover.png",
