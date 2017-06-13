@@ -32,6 +32,23 @@
     ]
   },
   {
+    "id": "Metabase",
+    "name": "Metabase",
+    "version": "2.0",
+    "compatibility": "25+",
+    "revision": "",
+    "logo_url": "assets/img/products/metabase.png",
+    "cover_url": "assets/img/products/metabase-cover.png",
+    "video_url" : "",
+    "github_url" : "https://github.com/hisptz/metabase",
+    "download_url": "assets/apps/zip/metabase.zip",
+    "demo_url": "",
+    "short_description": "DHIS 2 Platform based HTML App for management of Metadata Repository hosting metadata",
+    "description": "DHIS 2 Platform based HTML App for management of Metadata Repository hosting metadata from multiple dhis2 implementations for reuse within few clicks.The Application is powered by AngularJS, HTML5 and CSS3",
+    "features": ["Support for user friendly outline of package with essential details","User friendly import results preview","Support for Import and Preview Import","Support for classification of metadata","Support for data table preview of metadata in packages","Support Unique Shareable URL for Every Display Page","Support for indicating app in repository already installed","Support for multiple concurrent import operations"
+    ]
+  },
+  {
     "id": "idashboard",
     "name": "Interactive Dashboard",
     "version": "1.0",
@@ -67,7 +84,7 @@
     "id": "hisptz-touch-dashboard",
     "name": "Hisptz Touch Dashboard",
     "version": "1.0",
-    "compatibility": "25 -",
+    "compatibility": "25-",
     "revision": "",
     "logo_url": "assets/img/products/dhis2touch.png",
     "cover_url": "assets/img/products/hisptz-touch-dashboard.png",
