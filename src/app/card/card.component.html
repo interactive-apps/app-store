@@ -1,26 +1,26 @@
-<div class="col-md-3" style="display: inline-block;">
-<div class="row">
-  <div class="col-md-12">
+<div class="col-md-3" style="display: inline-block; padding-left: 4px; padding-right: 4px;">
+<!--<div class="row">-->
+  <!--<div class="col-md-12">-->
     <div class="panel panel-default" style="height: 45%">
       <div class="" style="height: 40%;">
-        <div class="product-detail-mask"></div>
-        <img src="{{product.cover_url}}" class="img-responsive" alt="" height="150px">
+        <!--<div class="product-detail-mask"></div>-->
+        <img src="{{product.cover_url}}" class="" alt="" width="220" height="150">
       </div>
-      <div class="panel-footer product-detail-panel-footer">
+      <div class="panel-footer product-detail-panel-footer" style="background-color: #00abc0">
         <div class="row">
-          <div class="col-md-12">
             <ul class="list-inline" style="">
               <li><h6><b>{{product.name}}</b></h6></li>
             </ul>
-          </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <a routerLink="/apps/{{product.id}}">View</a>
+            <a routerLink="/apps/{{product.id}}">
+              <span class="glyphicon glyphicon-arrow-right"></span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  <!--</div>-->
+<!--</div>-->
 </div>
