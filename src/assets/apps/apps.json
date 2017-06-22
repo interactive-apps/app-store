@@ -70,6 +70,23 @@
     ]
   },
   {
+    "id": "score_card",
+    "name": "Interactive Score Card",
+    "version": "2.1",
+    "compatibility": "21+",
+    "revision": "fc8f",
+    "logo_url": "assets/img/products/score-card.png",
+    "cover_url": "assets/img/products/score-card-cover.png",
+    "github_url" : "https://github.com/hisptz/scorecard.git",
+    "download_url": "assets/apps/zip/scorecard.zip",
+    "demo_url": "https://play.dhis2.org/demo/api/apps/scorecard/index.html#/",
+    "short_description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities",
+    "description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities, among features score card includes:",
+    "features": ["One click navigation across organization units, up and down the hierarchy","One click navigation across periods, traversing one period at a time into the past/future","Flexible and customizable, from indicators, data sources, layouts to the whole score-card template.","Highest resolutions score card on any media (powered by svg vector graphics & powerful css 3 )"
+    ]
+  },
+
+  {
     "id": "hisptz_touch",
     "name": "HISPTZ Touch",
     "version": "2.0",
@@ -83,6 +100,37 @@
     "short_description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone",
     "description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone, that aims to ship full dhis2 web experience completely offline on your smartphone. Among it's already completed features includes:",
     "features": ["Support for off-line aggregate data entry","Support for off-line standard reports","Extremely lightweight and compatible with widest range of smartphone devices"
+    ]
+  },
+
+  {
+    "id": "pockect_dhis2_os",
+    "name": "Pocket DHIS 2 Operating system",
+    "version": "1.0",
+    "compatibility": "",
+    "logo_url": "assets/img/products/pocketdhis2.png",
+    "cover_url": "assets/img/products/pocketdhis-cover2.png",
+    "github_url" : "",
+    "download_url": "http://hisptanzania.org/iso/pocket-dhis2.iso",
+    "short_description": "DHIS 2 Operating system, for personalized live and real-time experience of dhis2",
+    "description": "DHIS 2 Operating system, for personalized live and real-time experience of dhis2",
+    "features": ["Pre-installed dhis2 setup on your flash-disk ready to go for training/mass-distribution","Effortless installation of dhis2 powered linux on your computer without need of any technical expertise","Get a self-guided and personalized dhis2 demo and tour from your pen drive, right over tea-break","Train yourself with pre-loaded modules of dhis2 trainings right on your pocket"
+    ]
+  },
+  {
+    "id": "score_card_widget",
+    "name": "Interactive Score Card Widget",
+    "version": "2.1",
+    "compatibility": "21+",
+    "revision": "fc8f",
+    "logo_url": "assets/img/products/score-card-widget.png",
+    "cover_url": "assets/img/products/score-card-widget-cover.png",
+    "github_url" : "https://github.com/hisptz/scorecard-dashboard-widget.git",
+    "download_url": "assets/apps/zip/scorecard-dashboard-widget.zip",
+    "demo_url": "https://scorecard-dev.dhis2.org/demo/api/apps/scorecardWidget/index.html?dashboardItemId=GlI6MUdSXVJ",
+    "short_description": "Flexible and configurable DHIS 2 Score card application widget with limited interactive capabilities",
+    "description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities, among features score card includes:",
+    "features": ["One click navigation across organization units, up and down the hierarchy","One click navigation across periods, traversing one period at a time into the past/future","Flexible and customizable, from indicators, data sources, layouts to the whole score-card template.","Highest resolutions score card on any media (powered by svg vector graphics & powerful css 3 )"
     ]
   },
   {
