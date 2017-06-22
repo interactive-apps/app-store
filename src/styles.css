@@ -2875,14 +2875,14 @@ a,
   }
 
   footer {
-    padding-top: 15px;
+    padding-top: 10px;
   }
   footer .row .info {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   footer .row .info .title {
     text-align: center !important;
-    margin-top: 25px;
+    margin-top: 20px;
   }
   footer .row .info ul {
     text-align: center;
@@ -3730,5 +3730,23 @@ body {
     padding: 0;
   }
 }
-
+#vertical {
+  width:1px;
+  background-color:#000;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:150px;
+}
+#search-input{
+  border-radius: 2px;
+  padding: 2px;
+  width: 90%;
+  margin-left: 3%;
+  height: 30px;
+  text-align: center;
+}
+.carousel-inner{
+  height: 300px;
+}
 
