@@ -1,0 +1,30 @@
+<app-navigation></app-navigation>
+<section *ngIf="!loading && !hasError">
+  <div class="row">
+    <!--<div class="col-md-2" style="margin-left: 2%;">-->
+      <!--<div class="row">-->
+        <!--<a routerLink="" class="navbar-brand" style="padding-top: 2px;">-->
+          <!--<ul class="list-inline">-->
+            <!--<li><img src="assets/img/logo.png" alt=""></li>-->
+            <!--<li><span style="font-weight: bolder; color: #0284CF;">App store</span></li>-->
+          <!--</ul>-->
+        <!--</a>-->
+      <!--</div>-->
+      <!---->
+    <!--</div>-->
+    <div class="col-md-12" style="margin-left: 4%; width: 90%;">
+      <!--<app-slider></app-slider>-->
+      <div class="title-area">
+        <!--<h4 class="text-center">Browse,use and enjoy our cool apps on top of your dhis2 instance. Your desires and expectations are our code of conduct. Get involved with us in any way you want, most important thing of all,-->
+          <!--<br>-->
+        <h5>
+          <span class="text-info" style="font-size: 30px;"><b>TRY OUR APPS NOW!</b></span>
+        </h5>
+      </div>
+      <hr>
+      <app-card [product]="app"  *ngFor="let app of apps | filterBy: appFilter"></app-card>
+      <hr>
+    </div>
+  </div>
+  <!--<router-outlet></router-outlet>-->
+</section>
