@@ -1,26 +1,51 @@
-<div class="col-md-3" style="display: inline-block; padding-left: 4px; padding-right: 4px;">
-<!--<div class="row">-->
-  <!--<div class="col-md-12">-->
-    <div class="panel panel-default" style="height: 45%">
-      <div class="" style="height: 40%;">
-        <!--<div class="product-detail-mask"></div>-->
-        <img src="{{product.cover_url}}" class="" alt="" width="220" height="150">
+<div class="col-md-4" style="display: inline-block;">
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default" style="height: 60%;background-color: #d4d4d6">
+      <!--<ul class="list-inline" style="">-->
+      <!--<h5><b>{{product.name}}</b></h5>-->
+      <!--</ul>-->
+      <div class="panel-body" style="padding: 5px;">
+        <a routerLink="/apps/{{product.id}}">
+          <div class="" style="height: 50%;">
+            <!--<div class="product-detail-mask"></div>-->
+            <img src="{{product.cover_url}}" class="" alt="" style="width: 100%; height: 250px;">
+          </div>
+        </a>
+        <h6 style="text-align: left; margin-bottom: 0px;">{{product.name}}</h6>
       </div>
-      <div class="panel-footer product-detail-panel-footer" style="background-color: #00abc0">
+
+      <div class="panel-footer" style="padding: 5px; height: 80px; border-style: none; margin-top: 0px;">
+        <div style="border-bottom: solid 1px #ddd; margin-bottom: 5px;"></div>
         <div class="row">
-            <ul class="list-inline" style="">
-              <li><h6><b>{{product.name}}</b></h6></li>
+          <div class="col-md-12">
+            <ul class="list-inline pull-left">
+              <li><a href="{{product.download_url}}" class="btn-sm"><i class="fa fa-download"></i></a></li>
+              <li *ngIf="product.demo_url"><a href="{{product.demo_url}}" target="_black" class="btn-sm"><i class="fa fa-eye"></i></a></li>
+              <li *ngIf="product.github_url"><a href="{{product.github_url}}" target="_blank" class="btn-sm"><i class="fa fa-github"></i></a></li>
             </ul>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <a routerLink="/apps/{{product.id}}">
-              <span class="glyphicon glyphicon-arrow-right"></span>
-            </a>
           </div>
         </div>
+        <div  class="row">
+            <div class="col-md-12">
+              <div class="fb-like" data-href="https://appstore.hisptanzania.org/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" style="height: 12px; margin-left: 5%; margin-right: 10px;" data-share="true"></div>
+            </div>
+        </div>
+        <div  class="row">
+          <div class="col-md-12">
+            <div class="fb-comments" data-href="https://appstore.hisptanzania.org/" data-numposts="1"></div>
+          </div>
+        </div>
+
+        <!--<div class="row">-->
+          <!--<div class="col-md-4">-->
+            <!--<a routerLink="/apps/{{product.id}}">-->
+              <!--<span class="glyphicon glyphicon-arrow-right"></span>-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
-  <!--</div>-->
-<!--</div>-->
+  </div>
+</div>
 </div>
