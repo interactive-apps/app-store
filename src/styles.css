@@ -1226,7 +1226,7 @@ a,
 }
 
 .section-cards .card a {
-  opacity: .93;
+  opacity: .20;
 }
 
 .section-we-do h3 {
@@ -1870,7 +1870,7 @@ a,
 
 .card {
   background: #fff;
-  box-shadow: 0 32px 44px -24px rgba(0, 0, 0, 0.23), 0 20px 25px 0px rgba(0, 0, 0, 0.12), 0 15px 10px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 16px -7px rgba(0, 0, 0, 0.23), 0 0px 0px 0px rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   margin-bottom: 30px;
   -webkit-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
@@ -1885,7 +1885,7 @@ a,
   -o-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
-  box-shadow: 0 26px 50px -10px rgba(0, 0, 0, 0.38), 0 10px 20px 0px rgba(0, 0, 0, 0.2), 0 15px 10px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.38), 0 5px 10px 0px rgba(0, 0, 0, 0.2), 0 7px 5px -5px rgba(0, 0, 0, 0.2);
 }
 .card .subtitle-black {
   color: #141414;

@@ -9,7 +9,6 @@
     "cover_url": "assets/img/products/score-card-cover.png",
     "github_url" : "https://github.com/hisptz/scorecard.git",
     "download_url": "assets/apps/zip/scorecard.zip",
-    "f_url": "https://appstore.hisptanzania.org/score_card",
     "demo_url": "https://play.dhis2.org/demo/api/apps/scorecard/index.html#/",
     "short_description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities",
     "description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities, among features score card includes:",

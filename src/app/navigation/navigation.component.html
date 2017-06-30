@@ -1,31 +1,23 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
   <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
-  <div class="container">
-    <div class="">
+  <div class="container" style="">
       <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div  class="col-md-3">
-              <a routerLink="" class="navbar-brand" style="padding-top: 2px;">
-                <ul class="list-inline">
-                  <li><img src="assets/img/logo.png" alt=""></li>
-                  <li><span style="font-weight: bolder; color: #0284CF;">App store</span></li>
-                </ul>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px; width: 100%;">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <ul class="list-inline pull-right">
-                <li><a href="https://github.com/hisptz" target="_blank" class="btn btn-sm" style="border-style: none;"><i class="fa fa-github"></i><small style="margin-left: 1%; color: #0284CF;">HISPTZ GitHub</small></a></li>
+          <div  class="col-md-3">
+            <a routerLink="" class="navbar-brand">
+              <ul class="list-inline">
+                <li><img src="assets/img/logo.png" alt=""></li>
+                <li><span style="font-weight: bolder; color: #0284CF;">App store</span></li>
               </ul>
-            </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <!--<div class="form-group">-->
+              <!--<input type="text" class="form-control" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px; width: 90%;margin-left: 5%;">-->
+            <!--</div>-->
+          </div>
+          <div class="col-md-3">
+            <a href="https://github.com/hisptz" target="_blank" class="btn pull-right" style="border-style: none;"><i class="fa fa-github"></i><small style="margin-left: 1%; color: #0284CF;">HISPTZ GitHub</small></a>
           </div>
         </div>
-      </div>
-    </div>
   </div>
 </nav>
