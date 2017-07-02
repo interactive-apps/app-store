@@ -3,50 +3,84 @@
     <div class="panel-body">
       <a routerLink="/apps/{{product.id}}" class="product-block">
         <div class="product-pic">
-          <img src="{{product.logo_url}}" alt="" class="">
+          <!--<img src="{{product.logo_url}}" alt="" class="">-->
+          <a href="#">
+            <img src="{{product.logo_url}}"
+                 (mousemove) ="this.src=''+product.cover_url" (mouseout)="this.src=''+product.logo_url"
+                 border="0" alt=""/></a>
         </div>
         <div id="product-name">
           <h3>{{product.name}}</h3>
         </div>
       </a>
     </div>
-    <div style="height: 70px;">
-      <div class="row">
-        <div class="col-md-2" style="display: inline-block"></div>
-        <div class="col-md-2" style="display: inline-block">
-          <div class="dropdown">
-            <a class="dropbtn"><i class="fa fa-download"></i></a>
-            <div class="dropdown-content">
-              <a class="links" href="{{product.download_url}}" target="_blank">Download</a>
+      <div class="row" style="display: table; margin: auto;">
+        <!--<div class="col-md-2" style="display: inline-block"></div>-->
+        <!--<div class="col-md-2" style="display: inline-block">-->
+          <!--<div class="dropdown">-->
+            <!--<a class="dropbtn"><i class="fa fa-download"></i></a>-->
+            <!--<div class="dropdown-content">-->
+              <!--<a class="links" href="{{product.download_url}}" target="_blank">Download</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2" style="display: inline-block">-->
+          <!--<div class="dropdown">-->
+            <!--<a class="dropbtn"><i class="fa fa-eye"></i></a>-->
+            <!--<div class="dropdown-content">-->
+              <!--<a href="{{product.demo_url}}" target="_blank">Demo</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2" style="display: inline-block">-->
+          <!--<div class="dropdown">-->
+            <!--<a class="dropbtn"><i class="fa fa-github"></i></a>-->
+            <!--<div class="dropdown-content">-->
+              <!--<a href="{{product.github_url}}" target="_blank">Github</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2" style="display: inline-block"></div>-->
+        <ul class="list-inline" style="">
+          <li class="list-links">
+            <div class="dropdown">
+              <a class="dropbtn"><i class="fa fa-download"></i></a>
+              <div class="dropdown-content">
+                 <a class="links" href="{{product.download_url}}" target="_blank">Download</a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-2" style="display: inline-block">
-          <div class="dropdown">
-            <a class="dropbtn"><i class="fa fa-eye"></i></a>
-            <div class="dropdown-content">
-              <a href="{{product.demo_url}}" target="_blank">Demo</a>
+          </li>
+          <li class="list-links">
+            <div class="dropdown">
+              <a class="dropbtn"><i class="fa fa-eye"></i></a>
+              <div class="dropdown-content">
+                <a href="{{product.demo_url}}" target="_blank">Demo</a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-2" style="display: inline-block">
-          <div class="dropdown">
-            <a class="dropbtn"><i class="fa fa-github"></i></a>
-            <div class="dropdown-content">
-              <a href="{{product.github_url}}" target="_blank">Github</a>
+          </li>
+          <li class="list-links">
+            <div class="dropdown">
+              <a class="dropbtn"><i class="fa fa-github"></i></a>
+              <div class="dropdown-content">
+                <a href="{{product.github_url}}" target="_blank">Github</a>
+              </div>
             </div>
-          </div>
+          </li>
+        </ul>
+      </div>
+    <div class="row" style="height: 50px; padding-top: 2%;">
+      <div class="col-md-6">
+        <div *ngIf="product.id ==='score_card'" style="margin-left: 5%;">
+          <div class="fb-like" data-href="http://localhost:4200/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
         </div>
-        <div class="col-md-2" style="display: inline-block"></div>
+        <div *ngIf="product.id ==='score_card_widget'">
+          <div class="fb-like" data-href="http://localhost:4200/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rw-ui-container"></div>
       </div>
     </div>
-    <!--<div class="row">-->
-      <!--<div class="col-md-6">-->
-        <!--<div class="row" *ngIf="product.id ==='score_card'" style="margin-left: 5%;">-->
-          <!--<div class="fb-like" data-href="http://localhost:4200/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
   </div>
 
 </div>

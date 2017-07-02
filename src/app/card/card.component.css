@@ -89,3 +89,7 @@ h3{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
 }
+.list-links{
+  margin-left: 4%;
+  width: 27%;
+}
