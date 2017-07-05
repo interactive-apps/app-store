@@ -6,13 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import {AppsService} from "./apps.service";
+import {AppsService} from './apps.service';
 import { FilterPipe } from './filter.pipe';
 import { CardComponent } from './card/card.component';
 import { AppsComponent } from './apps/apps.component';
 import {routing} from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AppsNavComponent } from './apps/apps-nav/apps-nav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     CardComponent,
     AppsComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    AppsNavComponent
   ],
   imports: [
     BrowserModule,

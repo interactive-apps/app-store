@@ -27,6 +27,33 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1860862194234681";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=239181083239580";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=943957522413660";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <script type="text/javascript">(function(d, t, e, m){
 
   // Async Rating-Widget initialization.
@@ -52,7 +79,18 @@
   s.parentNode.insertBefore(rw, s);
 }(document, new Date(), "script", "rating-widget.com/"));</script>
 
-  <app-root>Loading...</app-root>
+
+  <script>
+    window.onload = function() {
+      FB.Event.subscribe('xfbml.render', function(response) {
+        console.log('rendered.... finally!');
+        console.log($("[button]"));
+      });
+    };
+  </script>
+  <div>
+    <app-root id="hidding-div">Loading...</app-root>
+  </div>
 
 
 </body>

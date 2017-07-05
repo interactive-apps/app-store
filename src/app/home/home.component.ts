@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AppsService} from "../apps.service";
+import {AppsService} from '../apps.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private appsService: AppsService) {
     this.loading = true;
     this.hasError = false;
-    this.appFilter= '';
+    this.appFilter = '';
   }
 
   ngOnInit() {

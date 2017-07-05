@@ -22,7 +22,7 @@ export class AppsService {
             this.apps = apps;
             observer.next(this.apps);
             observer.complete();
-          }, error => observer.error(error))
+          }, error => observer.error(error));
       }
     });
   }
@@ -31,16 +31,15 @@ export class AppsService {
     return Observable.create(observer => {
       this.all().subscribe(apps => {
         const app = _.find(apps, ['id', id]);
-
-        if(app) {
+        if (app) {
           observer.next(app);
           observer.complete();
         } else {
-          observer.error('App not found')
+          observer.error('App not found');
         }
 
-      },error => observer.error(error))
-    })
+      }, error => observer.error(error));
+    });
   }
 
 }
