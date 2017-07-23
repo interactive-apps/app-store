@@ -9,6 +9,7 @@ import * as _ from 'lodash';
 export class AppsService {
 
   apps: any[] = [];
+  private zone: any;
   constructor(private http: Http) { }
   all(): Observable<any> {
     return Observable.create(observer => {
@@ -42,4 +43,9 @@ export class AppsService {
     });
   }
 
+  reloadPage() { // click handler or similar
+    this.zone.runOutsideAngular(() => {
+      location.reload();
+    });
+  }
 }

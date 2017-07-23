@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FacebookModule } from 'ngx-facebook';
 
 import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
@@ -31,7 +32,8 @@ import { AppsNavComponent } from './apps/apps-nav/apps-nav.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    FacebookModule
   ],
   providers: [AppsService],
   bootstrap: [AppComponent]

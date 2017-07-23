@@ -13,7 +13,8 @@
           <div class="panel panel-default">
             <div class="panel-heading app-detail-panel-heading">
               <div class="app-detail-mask"></div>
-              <img src="{{app.cover_url}}" class="img-responsive" alt="">
+              <!--<img src="{{app.cover_url}}" class="img-responsive" alt="">-->
+              <app-slider></app-slider>
             </div>
             <div class="panel panel-default app-description-panel">
               <div class="panel-body">
@@ -40,14 +41,80 @@
                   </ul>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+              <div class="row" style="margin-bottom: 3%;">
+                <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
+                  <div *ngIf="app.id ==='score_card'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='score_card_widget'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='metabase'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/metabase" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='idashboard'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz_touch'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                  <div *ngIf="app.id ==='pockect_dhis2_os'">
+                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
+                  <!--<div class="rw-ui-container"></div>-->
+                  <!--<div class="wpac-rating3" data-wpac-chan="product_id_2"></div>-->
+                  <!--<div class="wpac-rating3" data-wpac-chan="product_id_7" data-wpac-stars="10" data-wpac-color="4caf50" data-wpac-size="20"></div>-->
+                  <div *ngIf="app.id ==='score_card'">
+                    <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='score_card_widget'">
+                    <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='metabase'">
+                    <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='idashboard'">
+                    <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz_touch'">
+                    <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                    <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
+                  <div *ngIf="app.id ==='pockect_dhis2_os'">
+                    <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                  </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/" data-numposts="3"></div>
+                <div class="col-md-12" style="width: 90%;">
+                  <div *ngIf="app.id ==='score_card'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='score_card_widget'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='metabase'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/metabase" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='idashboard'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz_touch'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-numposts="5"></div>
+                  </div>
+                  <div *ngIf="app.id ==='pockect_dhis2_os'">
+                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-numposts="5"></div>
+                  </div>
                 </div>
               </div>
             </div>

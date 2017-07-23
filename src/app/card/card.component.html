@@ -1,7 +1,7 @@
 <div class="col-md-3" style="margin-top: 2%;">
   <div class="panel card" >
     <div class="panel-body">
-      <a routerLink="/apps/{{product.id}}" class="product-block">
+      <a routerLink="/apps/{{product.id}}" (click)="reloadPage();" class="product-block">
         <div class="product-pic">
           <img src="{{product.logo_url}}" alt="">
         </div>
@@ -10,84 +10,58 @@
         </div>
       </a>
     </div>
-      <div class="row" style="display: table; margin: auto;">
-        <ul class="list-inline" style="">
-          <li class="list-links">
-            <div class="dropdown">
-              <a class="dropbtn"><i class="fa fa-download"></i></a>
-              <div class="dropdown-content">
-                 <a class="links" href="{{product.download_url}}" target="_blank">Download</a>
-              </div>
-            </div>
-          </li>
-          <li class="list-links">
-            <div class="dropdown">
-              <a class="dropbtn"><i class="fa fa-eye"></i></a>
-              <div class="dropdown-content">
-                <a href="{{product.demo_url}}" target="_blank">Demo</a>
-              </div>
-            </div>
-          </li>
-          <li class="list-links">
-            <div class="dropdown">
-              <a class="dropbtn"><i class="fa fa-github"></i></a>
-              <div class="dropdown-content">
-                <a href="{{product.github_url}}" target="_blank">Github</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <div class="row" style="height: 75px; padding-top: 2%; margin-left: 3%;">
-      <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%">
+    <div class="row" style="height: 70px; display: table; margin: auto;">
+      <div class="col-md-12" style="display: table; margin: auto; margin-top: 2%;">
         <div *ngIf="product.id ==='score_card'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='score_card_widget'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='metabase'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/metabase" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='idashboard'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='hisptz_touch'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='hisptz-touch-dashboard'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
         <div *ngIf="product.id ==='pockect_dhis2_os'">
-          <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+          <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
         </div>
       </div>
-      <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
-        <!--<div class="rw-ui-container"></div>-->
-        <!--<div class="wpac-rating3" data-wpac-chan="product_id_2"></div>-->
-        <!--<div class="wpac-rating3" data-wpac-chan="product_id_7" data-wpac-stars="10" data-wpac-color="4caf50" data-wpac-size="20"></div>-->
-        <div *ngIf="product.id ==='score_card'">
-          <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='score_card_widget'">
-          <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='metabase'">
-          <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='idashboard'">
-          <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='hisptz_touch'">
-          <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='hisptz-touch-dashboard'">
-          <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-        <div *ngIf="product.id ==='pockect_dhis2_os'">
-          <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="10" data-wpac-color="5bc0de" data-wpac-size=""></div>
-        </div>
-      </div>
+    </div>
+    <div class="row" style="display: table; margin: auto;">
+      <ul class="list-inline" style="">
+        <li class="list-links">
+          <div class="dropdown">
+            <a class="dropbtn"><i class="fa fa-download"></i></a>
+            <div class="dropdown-content">
+              <a class="links" href="{{product.download_url}}" target="_blank">Download</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-links">
+          <div class="dropdown">
+            <a class="dropbtn"><i class="fa fa-eye"></i></a>
+            <div class="dropdown-content">
+              <a href="{{product.demo_url}}" target="_blank">Demo</a>
+            </div>
+          </div>
+        </li>
+        <li class="list-links">
+          <div class="dropdown">
+            <a class="dropbtn"><i class="fa fa-github"></i></a>
+            <div class="dropdown-content">
+              <a href="{{product.github_url}}" target="_blank">Github</a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
