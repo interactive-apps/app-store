@@ -24,4 +24,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {}
 
+  reloadPage() {
+    this.appsService.reloadPage();
+  }
 }

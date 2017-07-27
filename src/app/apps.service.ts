@@ -43,7 +43,7 @@ export class AppsService {
     });
   }
 
-  reloadPage() { // click handler or similar
+  reloadPage() {
     this.zone.runOutsideAngular(() => {
       location.reload();
     });

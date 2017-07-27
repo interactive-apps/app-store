@@ -27,4 +27,8 @@ export class AppsNavComponent implements OnInit {
       });
     });
   }
+
+  reloadPage() {
+    this.appService.reloadPage();
+  }
 }
