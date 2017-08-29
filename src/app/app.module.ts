@@ -15,6 +15,7 @@ import {routing} from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppsNavComponent } from './apps/apps-nav/apps-nav.component';
+import { CardSliderComponent } from './card/card-slider/card-slider.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AppsNavComponent } from './apps/apps-nav/apps-nav.component';
     AppsComponent,
     HomeComponent,
     NavbarComponent,
-    AppsNavComponent
+    AppsNavComponent,
+    CardSliderComponent
   ],
   imports: [
     BrowserModule,

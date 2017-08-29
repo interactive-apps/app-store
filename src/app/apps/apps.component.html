@@ -1,143 +1,151 @@
 <div class="row" style="background-color: #FFFFFF;">
   <app-apps-nav></app-apps-nav>
-
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
         <ul class="list-inline" style="border-bottom: solid 1px #F5F5F5;margin-left: 5px;">
           <li><img src="{{app.logo_url}}" alt="" width="30" height="35" style="padding-bottom: 7px;"></li>
           <li><h3 style="text-align: center;"><b>{{app.name}}</b></h3></li>
         </ul>
       </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="panel panel-default">
-            <div class="panel-heading app-detail-panel-heading">
-              <div class="app-detail-mask"></div>
-              <!--<img src="{{app.cover_url}}" class="img-responsive" alt="">-->
-              <app-slider></app-slider>
-            </div>
-            <div class="panel panel-default app-description-panel">
-              <div class="panel-body">
-                <h4><b>Description</b></h4>
-                <p class="text-justify">{{app.description}}</p>
-                <ul class="list-inline">
-                  <li><small><b>Version:</b> {{app.version}}</small></li>
-                  <li *ngIf="app.compatibility"><small><b>Compatibility: Compatible with DHIS2 V</b> {{app.compatibility}}</small></li>
-                  <li *ngIf="app.revision"><small><b>Revision:</b> {{app.revision}}</small></li>
-                  <li><small><b>License:</b> <a target="_blank" style="color: #0189D6;" href="https://opensource.org/licenses/bsd-license.php">BSD License</a></small></li>
+      <div class="col-md-6">
+        <ul class="list-inline pull-right">
+          <li><a href="{{app.download_url}}" class="btn btn-sm" style="border: none"><i class="fa fa-download"></i> download</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading app-detail-panel-heading">
+            <div class="app-detail-mask"></div>
+            <!--<img src="{{app.cover_url}}" class="img-responsive" alt="">-->
+            <app-slider></app-slider>
+          </div>
+          <div class="panel-footer" style="background-color: #FFFFFF;">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="list-inline pull-left">
+                  <li><a href="{{app.download_url}}" class="btn btn-sm"><i class="fa fa-download"></i> download</a></li>
+                  <li *ngIf="app.demo_url"><a href="{{app.demo_url}}" target="_black" class="btn btn-sm"><i class="fa fa-download"></i> view demo</a></li>
+                  <li *ngIf="app.github_url"><a href="{{app.github_url}}" target="_blank" class="btn btn-sm"><i class="fa fa-github"></i> View on github</a></li>
+                </ul>
+                <ul class="list-inline pull-right">
+                  <li><a href="http://hisptanzania.org" target="_blank" class="btn btn-sm" style="border-style: none;"><small>By Hisp Tanzania</small></a></li>
                 </ul>
               </div>
             </div>
-            <div class="panel-footer">
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="list-inline pull-left">
-                    <li><a href="{{app.download_url}}" class="btn btn-sm"><i class="fa fa-download"></i> download</a></li>
-                    <li *ngIf="app.demo_url"><a href="{{app.demo_url}}" target="_black" class="btn btn-sm"><i class="fa fa-download"></i> view demo</a></li>
-                    <li *ngIf="app.github_url"><a href="{{app.github_url}}" target="_blank" class="btn btn-sm"><i class="fa fa-github"></i> View on github</a></li>
-                  </ul>
-                  <ul class="list-inline pull-right">
-                    <li><a href="http://hisptanzania.org" target="_blank" class="btn btn-sm" style="border-style: none;"><small>By Hisp Tanzania</small></a></li>
-                  </ul>
+            <hr>
+            <div class="row" style="margin-bottom: 3%; margin-left: 15%; width: 70%; margin-top: 1%;">
+              <div class="col-md-6" style="display: table;  margin-top: 2%;">
+                <div *ngIf="app.id ==='score_card'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='score_card_widget'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='metabase'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/metabase" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='idashboard'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz_touch'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div *ngIf="app.id ==='pockect_dhis2_os'">
+                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 </div>
               </div>
-              <div class="row" style="margin-bottom: 3%;">
-                <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
-                  <div *ngIf="app.id ==='score_card'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='score_card_widget'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='metabase'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/metabase" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='idashboard'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz_touch'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
-                  <div *ngIf="app.id ==='pockect_dhis2_os'">
-                    <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                  </div>
+              <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
+                <div *ngIf="app.id ==='score_card'">
+                  <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
                 </div>
-                <div class="col-md-6" style="display: table; margin: auto; margin-top: 2%;">
-                  <!--<div class="rw-ui-container"></div>-->
-                  <!--<div class="wpac-rating3" data-wpac-chan="product_id_2"></div>-->
-                  <!--<div class="wpac-rating3" data-wpac-chan="product_id_7" data-wpac-stars="10" data-wpac-color="4caf50" data-wpac-size="20"></div>-->
-                  <div *ngIf="app.id ==='score_card'">
-                    <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='score_card_widget'">
-                    <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='metabase'">
-                    <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='idashboard'">
-                    <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz_touch'">
-                    <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
-                    <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
-                  <div *ngIf="app.id ==='pockect_dhis2_os'">
-                    <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                  </div>
+                <div *ngIf="app.id ==='score_card_widget'">
+                  <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                </div>
+                <div *ngIf="app.id ==='metabase'">
+                  <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                </div>
+                <div *ngIf="app.id ==='idashboard'">
+                  <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz_touch'">
+                  <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                  <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+                </div>
+                <div *ngIf="app.id ==='pockect_dhis2_os'">
+                  <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12" style="width: 90%;">
-                  <div *ngIf="app.id ==='score_card'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='score_card_widget'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='metabase'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/metabase" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='idashboard'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz_touch'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='hisptz-touch-dashboard'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-numposts="5"></div>
-                  </div>
-                  <div *ngIf="app.id ==='pockect_dhis2_os'">
-                    <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-numposts="5"></div>
-                  </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12" style="width: 70%; margin-left: 15%;">
+                <div *ngIf="app.id ==='score_card'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='score_card_widget'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='metabase'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/metabase" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='idashboard'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz_touch'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='hisptz-touch-dashboard'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-numposts="5"></div>
+                </div>
+                <div *ngIf="app.id ==='pockect_dhis2_os'">
+                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-numposts="5"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="panel panel-default app-features-panel">
-            <div class="panel-body">
-              <h4><b>Features</b></h4>
-              <ul class="list-unstyled" *ngFor="let item of app.features">
-                <li>
-                  <div class="row">
-                    <div class="col-md-2 col-xs-2 col-sm-2" style="color: #008EDD; padding-left: 8%;"><span class=""><i class="fa fa-check-square"></i></span></div>
-                    <div class="col-md-10 col-xs-10 col-sm-10" style="padding-left: 0px;">{{item}}</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default app-description-panel"  style="height: 150px; overflow-y: scroll">
+          <div class="panel-body">
+            <h4><b>Description</b></h4>
+            <p class="text-justify">{{app.description}}</p>
+            <ul class="list-inline">
+              <li><small><b>Version:</b> {{app.version}}</small></li>
+              <li *ngIf="app.compatibility"><small><b>Compatibility: </b> Compatible with DHIS V {{app.compatibility}}</small></li>
+              <li *ngIf="app.revision"><small><b>Revision:</b> {{app.revision}}</small></li>
+              <li><small><b>License:</b> <a target="_blank" style="color: #0189D6;" href="https://opensource.org/licenses/bsd-license.php">BSD License</a></small></li>
+            </ul><br>
+            <ul class="list-inline  pull-right">
+              <li *ngIf="app.github_url"><a href="{{app.github_url}}" target="_blank" class="btn btn-sm" style="border: none;"><i class="fa fa-github"></i> View on github</a></li>
+              <li><a routerLink="/" class="btn btn-sm" style="border: none" (click)="reloadPage();">ALL PRODUCTS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default app-features-panel" style="height: 230px; overflow-y: scroll">
+          <div class="panel-body">
+            <h4><b>Features</b></h4>
+            <ul class="list-unstyled" *ngFor="let item of app.features">
+              <li>
+                <div class="row">
+                  <div class="col-md-2 col-xs-2 col-sm-2" style="color: #008EDD; padding-left: 8%;"><span class=""><i class="fa fa-check-square"></i></span></div>
+                  <div class="col-md-10 col-xs-10 col-sm-10" style="padding-left: 0px;">{{item}}</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 

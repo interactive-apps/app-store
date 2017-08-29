@@ -3,34 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>AppStore</title>
-  <base href="/">
+  <base href="">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyA4dB6hOmU5uSE9jJVIQOylozNgrKQTDtc",
-      authDomain: "hisp-development.firebaseapp.com",
-      databaseURL: "https://hisp-development.firebaseio.com",
-      projectId: "hisp-development",
-      storageBucket: "",
-      messagingSenderId: "1052791465048"
-    };
-    firebase.initializeApp(config);
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-
 </head>
 <body>
 <div id="fb-root"></div>
@@ -132,24 +112,16 @@
 }(document, new Date(), "script", "rating-widget.com/"));</script>
 
 
-  <script>
-//    window.fbAsyncInit = function() {
-//      if (typeof FB !== 'undefined') {
-//        console.log('This is output');
-//      }
-//    }
-  </script>
-
-
 <script type="text/javascript">
   wpac_init = window.wpac_init || [];
   wpac_init.push({
     widget: 'Rating',
     id: 1,
     el: 'wpac-rating3',
+    html: '{{?it.count>0}} {{=it.rating}}{{?}} {{=it.count}} {{=it.votes}} {{=it.stars}} {{?it.count>0}}{{?}}',
     stars: 5,
     color: '00abc0',
-    size: 12
+    size: 11
   });
   (function() {
     if ('WIDGETPACK_LOADED' in window) return;
@@ -161,10 +133,11 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
   })();
 </script>
-  <div>
-    <app-root id="hidding-div">Loading...</app-root>
+<app-root>
+  <div style="padding-top: 10%; text-align: center;">
+    <!--<img src="assets/img/balls-3.svg" alt="">-->
+    <h2>Welcome to <span style="color: #61B9E9;"><b>HISP</b></span> <span style="color: #FDD301;">Tanzania</span><b style="color: #61B9E9;"> AppStore</b></h2>
   </div>
-
-
+</app-root>
 </body>
 </html>

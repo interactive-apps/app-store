@@ -14,4 +14,4 @@ const app_routes: Routes = [
   {path: 'apps-nav', component: AppsNavComponent}
 ];
 
-export  const routing = RouterModule.forRoot(app_routes);
+export  const routing = RouterModule.forRoot(app_routes, { useHash: true});

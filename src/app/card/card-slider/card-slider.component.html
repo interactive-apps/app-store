@@ -1,0 +1,18 @@
+<div id="appstore" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="{{product.cover_url}}" alt="">
+      <div class="carousel-caption">
+        <h3 *ngIf="product.name">{{product.name}}</h3>
+        <p *ngIf="product.short_description">{{product.short_description}}</p>
+      </div>
+    </div>
+    <div class="item" *ngIf="product.id==='score_card'">
+      <iframe width="780" height="420" src="https://www.youtube.com/embed/2AHZZpHvspE?autoplay=1" frameborder="0" allowfullscreen></iframe>
+      <div class="carousel-caption">
+        <h3 *ngIf="product.name">{{product.name}}</h3>
+        <p *ngIf="product.short_description">{{product.short_description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

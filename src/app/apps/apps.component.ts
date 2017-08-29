@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {AppsService} from '../apps.service';
 
@@ -13,7 +13,8 @@ export class AppsComponent implements OnInit {
   app: any;
   constructor(
     private route: ActivatedRoute,
-    private appService: AppsService
+    private appService: AppsService,
+    private zone: NgZone
   ) { }
 
   ngOnInit() {
@@ -27,4 +28,9 @@ export class AppsComponent implements OnInit {
     });
   }
 
+  reloadPage() {
+    this.zone.runOutsideAngular(() => {
+      location.reload();
+    });
+  }
 }
