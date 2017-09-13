@@ -7,13 +7,12 @@ import * as _ from 'lodash';
 
 @Injectable()
 export class AppsService {
-
   apps: any[] = [];
   private zone: any;
   constructor(private http: Http) { }
   all(): Observable<any> {
     return Observable.create(observer => {
-      if(this.apps.length > 0) {
+      if (this.apps.length > 0) {
         observer.next(this.apps);
         observer.complete();
       } else {

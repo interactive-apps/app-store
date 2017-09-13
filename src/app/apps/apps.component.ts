@@ -1,5 +1,5 @@
 import {Component, NgZone, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 import {AppsService} from '../apps.service';
 
 @Component({
@@ -9,25 +9,24 @@ import {AppsService} from '../apps.service';
 })
 export class AppsComponent implements OnInit {
 
-  appId: string;
   app: any;
+  private zone: NgZone;
   constructor(
     private route: ActivatedRoute,
-    private appService: AppsService,
-    private zone: NgZone
+    private appService: AppsService
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe((params:any) => {
-      this.appId = params.id;
-      this.appService.find(params.id).subscribe(app => {
+    this.route.params.forEach((params: Params) => {
+      const appId: string = params['id'];
+      this.appService.find(appId).subscribe(app => {
         this.app = app;
       }, error => {
         console.log(error);
       });
     });
   }
-
+  // Reloading the page
   reloadPage() {
     this.zone.runOutsideAngular(() => {
       location.reload();

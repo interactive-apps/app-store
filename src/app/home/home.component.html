@@ -1,18 +1,16 @@
-<section class="" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
-  <app-navigation></app-navigation>
-  <div class="row" style="padding-top: 0px;" style="margin-left: 5%; width: 90%;">
-      <div class="row">
-        <div class="form-group">
-          <input type="text" class="form-control" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px; width: 70%;margin-left: 15%;">
-        </div>
+<app-navigation></app-navigation>
+<div class="container" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
+  <div class="row" style="padding-top: 55px;">
+    <div class="row">
+      <div class="form-group">
+        <input type="text" class="form-control" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px;margin-left: 25%;">
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <app-card [product]="app"  *ngFor="let app of apps | filterBy: appFilter"></app-card>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-card [product]="app"  *ngFor="let app of apps | filterBy: appFilter"></app-card>
       </div>
-      <hr>
-    <!--</div>-->
+    </div>
+    <hr>
   </div>
-  <!--<router-outlet></router-outlet>-->
-</section>
+</div>

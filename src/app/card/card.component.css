@@ -1,5 +1,5 @@
 #description-slide {
-  overflow-y: scroll; height: 150px; width: 100%; text-align: center; font-weight: 600px;
+  height: 150px; width: 100%; text-align: center; font-weight: 600px;
 }
 #description-slide p {
   padding: 10px;
@@ -127,4 +127,12 @@
 
 iframe {
   width: 100%;
+}
+
+.carousel-control.right {
+  background-image: none !important;
+}
+
+.carousel-control.left {
+  background-image: none !important;
 }

@@ -19,13 +19,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.appsService.all().subscribe(apps =>{
+    this.appsService.all().subscribe(apps => {
       this.apps = apps;
       this.loading = false;
       this.hasError = false;
     },
-    error =>{
-      this.loading= false;
+    error => {
+      this.loading = false;
       this.hasError = true;
     });
   }

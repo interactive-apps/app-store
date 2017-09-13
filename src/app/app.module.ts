@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppsNavComponent } from './apps/apps-nav/apps-nav.component';
 import { CardSliderComponent } from './card/card-slider/card-slider.component';
+import { PageLikesComponent } from './page-likes/page-likes.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,16 @@ import { CardSliderComponent } from './card/card-slider/card-slider.component';
     HomeComponent,
     NavbarComponent,
     AppsNavComponent,
-    CardSliderComponent
+    CardSliderComponent,
+    PageLikesComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    FacebookModule
+    FacebookModule.forRoot()
   ],
   providers: [AppsService],
   bootstrap: [AppComponent]

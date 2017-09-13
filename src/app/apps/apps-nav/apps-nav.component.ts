@@ -18,14 +18,14 @@ export class AppsNavComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe((params:any) => {
-      this.appId = params.id;
-      this.appService.find(params.id).subscribe(app => {
-        this.app = app;
-      }, error => {
-        console.log(error);
-      });
-    });
+    // this.route.params.subscribe((params:any) => {
+    //   this.appId = params.id;
+    //   this.appService.find(params.id).subscribe(app => {
+    //     this.app = app;
+    //   }, error => {
+    //     console.log(error);
+    //   });
+    // });
   }
 
   reloadPage() {

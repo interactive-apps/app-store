@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 100%;
-  background-color: #F2F2F2;
 }
 @media (min-width: 58em) {
   body {
@@ -3739,9 +3738,8 @@ body {
   left:150px;
 }
 #search-input{
-  padding: 2px;
   margin-top: 20px;
-  width: 100%;
+  width: 50%;
   height: 35px;
   text-align: center;
 }

@@ -1,9 +1,13 @@
-<div class="col-md-3" style="margin-top: 2%;">
+<div *ngIf="product.id !== ''" class="col-md-3 col-sm-4 col-xs-6" style="margin-top: 2%;">
   <div class="panel card" >
     <div class="panel-body" style="padding-bottom: 0%;">
         <div
           (mouseenter)="theClass = 'carousel slide'"
           (mouseleave)="theClass = 'carousel'"
+          (mouseenter)="chevClassLeft = 'glyphicon glyphicon-chevron-left'"
+          (mouseleave)="chevClassLeft = 'glyphicon'"
+          (mouseenter)="chevClassRight = 'glyphicon glyphicon-chevron-right'"
+          (mouseleave)="chevClassRight = 'glyphicon'"
         >
           <div id="{{product.id}}" [ngClass] = "theClass" style="height: 100px; width: 100%;">
             <a routerLink="/apps/{{product.id}}" (click)="reloadPage();" id="card-link" class="product-block">
@@ -12,24 +16,25 @@
                 <img src="{{product.cover_url}}" style="width: 100%; height: 100px;">
               </div>
               <div class="item" id="description-slide">
-                <h4>{{product.name}}</h4>
                 <p>{{product.short_description}}</p>
               </div>
             </div>
             </a>
           </div>
-          <a class="left" href="#{{product.id}}"
-             (click)="theClass = 'carousel slide'"
-             data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" style="color: #00abc0"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right pull-right" href="#{{product.id}}"
-             (click)="theClass = 'carousel slide'"
-             data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" style="color: #00abc0"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div style="height: 20px">
+            <a class="left" href="#{{product.id}}"
+               (click)="theClass = 'carousel slide'"
+               data-slide="prev">
+              <span [ngClass]="chevClassLeft" style="color: #00abc0"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right pull-right" href="#{{product.id}}"
+               (click)="theClass = 'carousel slide'"
+               data-slide="next">
+              <span [ngClass]="chevClassRight" style="color: #00abc0"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       <div style="display: table; margin: auto; text-align: center">
 
@@ -75,7 +80,7 @@
         </li>
         <li class="list-links">
           <div class="dropdown">
-            <a class="dropbtn"><i class="fa fa-eye"></i></a>
+            <a class="dropbtn"><i *ngIf="product.demo_url" class="fa fa-eye"></i></a>
             <div class="dropdown-content" *ngIf="product.demo_url">
               <a href="{{product.demo_url}}" target="_blank">Demo</a>
             </div>
@@ -83,7 +88,7 @@
         </li>
         <li class="list-links">
           <div class="dropdown">
-            <a class="dropbtn"><i class="fa fa-github"></i></a>
+            <a class="dropbtn"><i *ngIf="product.github_url" class="fa fa-github"></i></a>
             <div class="dropdown-content" *ngIf="product.github_url">
               <a href="{{product.github_url}}" target="_blank">Github</a>
             </div>
@@ -92,6 +97,5 @@
       </ul>
     </div>
   </div>
-
 </div>
 

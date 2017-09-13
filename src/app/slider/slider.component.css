@@ -1,5 +1,4 @@
 .carousel-inner{
-  height: 375px;
   background-color: #FFFFFF;
 }
 
@@ -17,4 +16,12 @@
 
 .carousel-control {
   background-color: transparent;
+}
+
+.carousel-control.right {
+  background-image: none !important;
+}
+
+.carousel-control.left {
+  background-image: none !important;
 }

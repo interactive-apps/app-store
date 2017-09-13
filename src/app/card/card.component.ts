@@ -15,6 +15,8 @@ export class CardComponent implements OnInit {
   public hasError: boolean;
   public appFilter: string;
   public theClass = 'carousel';
+  public chevClassRight = '';
+  public chevClassLeft = '';
 
   constructor(private appsService: AppsService,
               private zone: NgZone) {
