@@ -109,10 +109,4 @@ export class CardComponent implements OnInit {
       });
     }
   }
-
-  reloadPage() {
-    this.zone.runOutsideAngular(() => {
-      location.reload();
-    });
-  }
 }

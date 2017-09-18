@@ -1,6 +1,7 @@
 [
   {
-    "id": "score_card",
+    "id": "453832331637287",
+    "starId": 453832331637287,
     "name": "Interactive Score Card",
     "version": "2.1",
     "compatibility": "21+",
@@ -11,13 +12,15 @@
     "download_url": "assets/apps/zip/scorecard.zip",
     "youtube_url": "https://www.youtube.com/embed/2AHZZpHvspE?autoplay=1",
     "demo_url": "https://play.dhis2.org/demo/api/apps/scorecard/index.html#/",
+    "facebook_url": "https://developers.facebook.com/apps/453832331637287/dashboard/",
     "short_description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities",
     "description": "Flexible and configurable DHIS 2 Score card application with limited interactive capabilities, among features score card includes:",
     "features": ["One click navigation across organization units, up and down the hierarchy","One click navigation across periods, traversing one period at a time into the past/future","Flexible and customizable, from indicators, data sources, layouts to the whole score-card template.","Highest resolutions score card on any media (powered by svg vector graphics & powerful css 3 )"
     ]
   },
   {
-    "id": "score_card_widget",
+    "id": "1860862194234681",
+    "starId": 1860862194234681,
     "name": "Interactive Score Card Widget",
     "version": "2.1",
     "compatibility": "2.21+",
@@ -26,7 +29,7 @@
     "cover_url": "assets/img/products/score-card-widget-cover.png",
     "github_url" : "https://github.com/hisptz/scorecard-dashboard-widget.git",
     "download_url": "assets/apps/zip/scorecard-dashboard-widget.zip",
-    "f_url": "https://appstore.hisptanzania.org/score_card_widget",
+    "facebook_url": "https://developers.facebook.com/apps/1860862194234681/dashboard/",
     "youtube_url":"https://www.youtube.com/embed/6qJGXlgOQl4?autoplay=1",
     "demo_url": "https://scorecard-dev.dhis2.org/demo/api/apps/scorecardWidget/index.html?dashboardItemId=GlI6MUdSXVJ",
     "short_description": "Flexible and configurable DHIS 2 Score card application widget with limited interactive capabilities",
@@ -35,7 +38,8 @@
     ]
   },
   {
-    "id": "metabase",
+    "id": "239181083239580",
+    "starId": 239181083239580,
     "name": "Metabase",
     "version": "2.0",
     "compatibility": "2.25+",
@@ -45,7 +49,7 @@
     "video_url" : "",
     "github_url" : "https://github.com/hisptz/metabase",
     "download_url": "assets/apps/zip/metabase.zip",
-    "f_url": "<div class='fb-comments' data-href='https://appstore.hisptanzania.org/score_card' data-numposts='3'></div>",
+    "facebook_url": "https://developers.facebook.com/apps/239181083239580/dashboard/",
     "youtube_url":"",
     "demo_url": "",
     "short_description": "DHIS 2 Platform based HTML App for management of Metadata Repository hosting metadata",
@@ -54,7 +58,8 @@
     ]
   },
   {
-    "id": "idashboard",
+    "id": "943957522413660",
+    "starId": 943957522413660,
     "name": "Interactive Dashboard",
     "version": "1.0",
     "compatibility": "",
@@ -64,7 +69,7 @@
     "video_url" : "https://www.youtube.com/embed/YSvaTcpEZXQ?rel=0",
     "github_url" : "https://github.com/hisptz/idashboard.git",
     "download_url": "assets/apps/zip/idashboard.zip",
-    "f_url": "http://localhost:4446/apps/idashboard",
+    "facebook_url": "https://developers.facebook.com/apps/943957522413660/dashboard/",
     "youtube_url":"",
     "demo_url": "https://play.dhis2.org/demo/api/apps/idashboard/index.html#/",
     "short_description": "Flexible and Fully fledged DHIS 2 Dashboard application with interactive and intuitive capabilities",
@@ -73,7 +78,8 @@
     ]
   },
   {
-    "id": "hisptz_touch",
+    "id": "1341408295973905",
+    "starId": 1341408295973905,
     "name": "HISPTZ Touch",
     "version": "2.0",
     "compatibility": "",
@@ -82,7 +88,7 @@
     "cover_url": "assets/img/products/dhis2touch-cover.png",
     "github_url" : "https://github.com/hisptz/dhis-2-touch.git",
     "youtube_url":"",
-    "f_url": "http://localhost:4446/apps/hisptz_touch",
+    "facebook_url": "https://developers.facebook.com/apps/1341408295973905/dashboard/",
     "download_url": "https://play.google.com/store/apps/details?id=com.hipstz.dhis2.dhis2touch",
     "short_description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone",
     "description": "HTML5, Javascripts & CSS powered light-weight offline solution for android, apple and windows phone, that aims to ship full dhis2 web experience completely offline on your smartphone. Among it's already completed features includes:",
@@ -90,7 +96,8 @@
     ]
   },
   {
-    "id": "hisptz-touch-dashboard",
+    "id": "488046014870137",
+    "starId": 488046014870137,
     "name": "Hisptz Touch Dashboard",
     "version": "1.0",
     "compatibility": "2.25-",
@@ -100,7 +107,7 @@
     "github_url" : "https://github.com/hisptz/hisptz-touch-dashboard",
     "download_url": "assets/apps/zip/hisptz-touch-dashboard.apk",
     "youtube_url":"",
-    "f_url": "http://localhost:4446/apps/hisptz-touch-dashboard",
+    "facebook_url": "https://developers.facebook.com/apps/488046014870137/dashboard/",
     "demo_url": "",
     "short_description": "Flexible and Lightweight",
     "description": "Flexible and Lightweight",
@@ -108,7 +115,8 @@
     ]
   },
   {
-    "id": "pockect_dhis2_os",
+    "id": "259073774573329",
+    "starId": 259073774573329,
     "name": "Pocket DHIS 2 OS",
     "version": "1.0",
     "compatibility": "",
@@ -116,7 +124,7 @@
     "cover_url": "assets/img/products/pocketdhis-cover2.png",
     "github_url" : "",
     "youtube_url":"",
-    "f_url": "http://localhost:4446/apps/pockect_dhis2_os",
+    "facebook_url": "https://developers.facebook.com/apps/259073774573329/dashboard/",
     "download_url": "http://hisptanzania.org/iso/pocket-dhis2.iso",
     "short_description": "DHIS 2 Operating system, for personalized live and real-time experience of dhis2",
     "description": "DHIS 2 Operating system, for personalized live and real-time experience of dhis2",

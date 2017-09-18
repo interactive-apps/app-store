@@ -8,7 +8,7 @@
         <span class="icon-bar bar2"></span>
         <span class="icon-bar bar3"></span>
       </button>
-      <a routerLink="" class="navbar-brand" style="padding-top: 2px;" (click)="reloadPage();">
+      <a routerLink="" class="navbar-brand" style="padding-top: 2px;">
         <ul class="list-inline">
           <li><img src="assets/img/logo.png" alt=""></li>
           <li><span style="font-weight: bolder; color: #0284CF;">Home</span></li>
@@ -62,77 +62,101 @@
               </div>
             </div>
             <hr>
-            <div class="row" style="margin-bottom: 2%; margin-left: 25%; width: 50%;  margin-top: 1%;">
+            <div class="row" style="margin-bottom: 2%;  margin-top: 1%;">
+              <div class="col-md-12">
+                <fb-like href="{{ app.facebook_url }}"></fb-like>
+              </div>
               <div class="col-md-6" style="display: table;  margin-top: 2%;">
-                <div *ngIf="app.id ==='score_card'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='score_card_widget'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='metabase'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/metabase" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='idashboard'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='hisptz_touch'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='hisptz-touch-dashboard'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
-                <div *ngIf="app.id ==='pockect_dhis2_os'">
-                  <div class="fb-like" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                </div>
+                <fb-comments></fb-comments>
               </div>
-              <div class="col-md-6" style="display: table; margin-top: 2%;">
-                <div class="row" *ngIf="app.id ==='score_card'">
-                  <div class="wpac-rating3" data-wpac-chan="453832331637287" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
+              <div class="col-md-6" *ngIf="rateAverage" style="display: table; margin-top: 2%;">
+                <!--<div class="rating" style="display: table; margin: none;">-->
+                  <!--<span (click)="login(5)">☆</span><span (click)="login(4)">☆</span><span (click)="login(3)">☆</span><span (click)="login(2)">☆</span><span (click)="login(1)">☆</span>-->
+                <!--</div>-->
+                <div id="span-black">
+                  <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" (click)="login(5)" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" (click)="login(4.5)" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" (click)="login(4)" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half"  (click)="login(3.5)" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" (click)="login(3)" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" (click)="login(2.5)" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2"  (click)="login(2)" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" (click)="login(1.5)" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" (click)="login(1)" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" (click)="login(0.5)" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                  </fieldset>
+                </div> <br>
+                <h6>{{ rateAverage+'  ' }} by {{'  '+ totalRatings+' ' }}votes</h6>
+                  <div>
+                    <div class="" style="display: table;">
+                      <div id="rate-status">
+                        <ul class="list-inline">
+                          <li class="list-inline">
+                            <table style="background-color: rgb(16, 73, 17)">
+                              <tbody>
+                              <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li class="list-inline" style="margin-left: 0%;">{{ totalRatings5 }}</li>
+                        </ul>
+                      </div>
+                      <div id="rate-status">
+                        <ul class="list-inline">
+                          <li class="list-inline">
+                            <table style="background-color: rgb(47, 175, 49)">
+                              <tbody>
+                              <tr><td></td><td></td><td></td><td></td></tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li class="list-inline" style="margin-left: 0%;">{{ totalRatings4 }}</li>
+                        </ul>
+                      </div>
+                      <div id="rate-status">
+                        <ul class="list-inline">
+                          <li class="list-inline">
+                            <table style="background-color: rgb(9, 234, 13)">
+                              <tbody>
+                              <tr><td></td><td></td><td></td></tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li class="list-inline" style="margin-left: 0%;">{{ totalRatings3 }}</li>
+                        </ul>
+                      </div>
+                      <div id="rate-status">
+                        <ul class="list-inline">
+                          <li class="list-inline">
+                            <table style="background-color: rgb(233, 249, 9)">
+                              <tbody>
+                              <tr><td></td><td></td></tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li class="list-inline" style="margin-left: 0%;">{{ totalRatings2 }}</li>
+                        </ul>
+                      <div id="rate-status">
+                        <ul class="list-inline">
+                          <li class="list-inline">
+                            <table style="background-color: rgb(239, 55, 9)">
+                              <tbody>
+                              <tr><td></td></tr>
+                              </tbody>
+                            </table>
+                          </li>
+                          <li class="list-inline" style="margin-left: 5%;">{{ totalRatings1 }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="row" *ngIf="app.id ==='score_card_widget'">
-                  <div class="wpac-rating3" data-wpac-chan="1860862194234681" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='metabase'">
-                  <div class="wpac-rating3" data-wpac-chan="239181083239580" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='idashboard'">
-                  <div class="wpac-rating3" data-wpac-chan="943957522413660" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='hisptz_touch'">
-                  <div class="wpac-rating3" data-wpac-chan="1341408295973905" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='hisptz-touch-dashboard'">
-                  <div class="wpac-rating3" data-wpac-chan="488046014870137" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='pockect_dhis2_os'">
-                  <div class="wpac-rating3" data-wpac-chan="259073774573329" data-wpac-stars="5" data-wpac-color="5bc0de" data-wpac-size=""></div>
-                </div>
-              </div>
+            </div>
             </div>
             <div class="row">
-              <div class="col-md-12" style="width: 70%; margin-left: 15%;">
-                <div class="row" *ngIf="app.id ==='score_card'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='score_card_widget'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/score_card_widget" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='metabase'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/metabase" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='idashboard'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/idashboard" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='hisptz_touch'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz_touch" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='hisptz-touch-dashboard'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/hisptz-touch-dashboard" data-numposts="5"></div>
-                </div>
-                <div class="row" *ngIf="app.id ==='pockect_dhis2_os'">
-                  <div class="fb-comments" data-href="https://appstore.hisptanzania.org/apps/pockect_dhis2_os" data-numposts="5"></div>
-                </div>
+              <div class="col-md-12">
+                <!--<app-star-rating [theStarId] = "app.starId" [Id] = "Id" [rateAverageVal] = "rateAverage5"></app-star-rating>-->
               </div>
             </div>
           </div>

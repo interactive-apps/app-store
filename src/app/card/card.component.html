@@ -10,7 +10,7 @@
           (mouseleave)="chevClassRight = 'glyphicon'"
         >
           <div id="{{product.id}}" [ngClass] = "theClass" style="height: 100px; width: 100%;">
-            <a routerLink="/apps/{{product.id}}" (click)="reloadPage();" id="card-link" class="product-block">
+            <a routerLink="/apps/{{product.id}}" id="card-link" class="product-block">
             <div class="carousel-inner">
               <div class="item active">
                 <img src="{{product.cover_url}}" style="width: 100%; height: 100px;">
