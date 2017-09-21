@@ -4,7 +4,9 @@ section {
 h5{
   text-align: center;
 }
-
-input {
-  font-weight: 600;
+input[type="text"]
+{
+  border: 0;
+  border-bottom: 1px solid #000000;
+  outline: 0;
 }

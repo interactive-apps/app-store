@@ -20,7 +20,7 @@ export class FirebaseLikesComponent implements OnInit {
     this.likes.subscribe(likeRes => {
       this.totalLikes = likeRes.length;
       likeRes.forEach(function (res) {
-        console.log(res);
+        // console.log(res);
       });
     });
   }

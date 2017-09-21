@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FacebookModule } from 'ngx-facebook';
 
@@ -27,6 +27,7 @@ import {StarRatingModule} from 'angular-star-rating';
 import { FirebaseLikesComponent } from './firebase-likes/firebase-likes.component';
 import { FirebaseCommentsComponent } from './firebase-comments/firebase-comments.component';
 import { CommentsModalComponent } from './comments-modal/comments-modal.component';
+import {ChartModule} from 'angular2-highcharts';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,8 @@ import { CommentsModalComponent } from './comments-modal/comments-modal.componen
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth feature
     FormsModule,
+    ReactiveFormsModule,
+    // ChartModule.forRoot(require('highcharts')),
     HttpModule,
     routing,
     FacebookModule.forRoot(),
