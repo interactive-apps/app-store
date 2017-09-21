@@ -130,10 +130,5 @@
     "description": "DHIS 2 Operating system, for personalized live and real-time experience of dhis2",
     "features": ["Pre-installed dhis2 setup on your flash-disk ready to go for training/mass-distribution","Effortless installation of dhis2 powered linux on your computer without need of any technical expertise","Get a self-guided and personalized dhis2 demo and tour from your pen drive, right over tea-break","Train yourself with pre-loaded modules of dhis2 trainings right on your pocket"
     ]
-  },
-  {
-    "id": "",
-    "name": "xyz"
   }
-
 ]
