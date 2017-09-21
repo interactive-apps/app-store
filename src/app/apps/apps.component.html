@@ -63,37 +63,43 @@
             </div>
             <hr>
             <div class="row" style="margin-bottom: 2%;  margin-top: 1%;">
-              <div class="col-md-12">
-                <fb-like href="{{ app.facebook_url }}"></fb-like>
-              </div>
-              <div class="col-md-6" style="display: table;  margin-top: 2%;">
-                <fb-comments></fb-comments>
-              </div>
-              <div class="col-md-6" *ngIf="rateAverage" style="display: table; margin-top: 2%;">
+              <div class="col-md-12" *ngIf="rateAverage" style="display: table; margin-top: 2%; margin-left: 1%;">
                 <!--<div class="rating" style="display: table; margin: none;">-->
                   <!--<span (click)="login(5)">☆</span><span (click)="login(4)">☆</span><span (click)="login(3)">☆</span><span (click)="login(2)">☆</span><span (click)="login(1)">☆</span>-->
                 <!--</div>-->
+
+                <app-firebase-likes [Id]="app.id"></app-firebase-likes>
+                <h6 style="text-align: left; margin-top: 0;">{{ rateAverage+'  ' }} by {{'  '+ totalRatings+' ' }}votes</h6>
                 <div id="span-black">
                   <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" (click)="login(5)" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-                    <input type="radio" id="star4half" name="rating" value="4 and a half" (click)="login(4.5)" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                    <input type="radio" id="star4" name="rating" value="4" (click)="login(4)" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                    <input type="radio" id="star3half" name="rating" value="3 and a half"  (click)="login(3.5)" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                    <input type="radio" id="star3" name="rating" value="3" (click)="login(3)" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                    <input type="radio" id="star2half" name="rating" value="2 and a half" (click)="login(2.5)" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                    <input type="radio" id="star2" name="rating" value="2"  (click)="login(2)" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                    <input type="radio" id="star1half" name="rating" value="1 and a half" (click)="login(1.5)" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                    <input type="radio" id="star1" name="rating" value="1" (click)="login(1)" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                    <input type="radio" id="starhalf" name="rating" value="half" (click)="login(0.5)" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                    <input type="radio" id="star5" name="rating" value="5" (click)="login(5)" />
+                    <label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" (click)="login(4.5)" />
+                    <label class="half" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" (click)="login(4)" />
+                    <label class = "full" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half"  (click)="login(3.5)" />
+                    <label class="half" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" (click)="login(3)" />
+                    <label class = "full" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" (click)="login(2.5)" />
+                    <label class="half" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2"  (click)="login(2)" />
+                    <label class = "full" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" (click)="login(1.5)" />
+                    <label class="half" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" (click)="login(1)" />
+                    <label class = "full" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" (click)="login(0.5)" />
+                    <label class="half" *ngIf="rateAverage > 4 && rateAverage < 5" style="color: #0284CF" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                   </fieldset>
-                </div> <br>
-                <h6>{{ rateAverage+'  ' }} by {{'  '+ totalRatings+' ' }}votes</h6>
-                  <div>
+                </div> <br><br>
+                 <div>
                     <div class="" style="display: table;">
                       <div id="rate-status">
                         <ul class="list-inline">
                           <li class="list-inline">
-                            <table style="background-color: rgb(16, 73, 17)">
+                            <table style="background-color: rgb(168, 165, 164)">
                               <tbody>
                               <tr><td></td><td></td><td></td><td></td><td></td></tr>
                               </tbody>
@@ -105,7 +111,7 @@
                       <div id="rate-status">
                         <ul class="list-inline">
                           <li class="list-inline">
-                            <table style="background-color: rgb(47, 175, 49)">
+                            <table style="background-color: rgb(168, 165, 164)">
                               <tbody>
                               <tr><td></td><td></td><td></td><td></td></tr>
                               </tbody>
@@ -117,7 +123,7 @@
                       <div id="rate-status">
                         <ul class="list-inline">
                           <li class="list-inline">
-                            <table style="background-color: rgb(9, 234, 13)">
+                            <table style="background-color: rgb(168, 165, 164)">
                               <tbody>
                               <tr><td></td><td></td><td></td></tr>
                               </tbody>
@@ -129,7 +135,7 @@
                       <div id="rate-status">
                         <ul class="list-inline">
                           <li class="list-inline">
-                            <table style="background-color: rgb(233, 249, 9)">
+                            <table style="background-color: rgb(168, 165, 164)">
                               <tbody>
                               <tr><td></td><td></td></tr>
                               </tbody>
@@ -140,7 +146,7 @@
                       <div id="rate-status">
                         <ul class="list-inline">
                           <li class="list-inline">
-                            <table style="background-color: rgb(239, 55, 9)">
+                            <table style="background-color: rgb(168, 165, 164)">
                               <tbody>
                               <tr><td></td></tr>
                               </tbody>
@@ -152,7 +158,19 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="col-md-4" *ngIf="app.id">
+                <!--<app-firebase-likes [Id]="app.id"></app-firebase-likes>-->
+                <!--<app-firebase-comments [Id]="app.id"></app-firebase-comments>-->
+              </div>
             </div>
+            <div class="row">
+              <!--<div class="col-md-12">-->
+                <!--<fb-like href="{{ app.facebook_url }}"></fb-like>-->
+              <!--</div>-->
+              <div class="col-md-12" style="display: table;  margin-top: 2%;">
+                <fb-comments></fb-comments>
+              </div>
             </div>
             <div class="row">
               <div class="col-md-12">

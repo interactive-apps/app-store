@@ -1,0 +1,43 @@
+<div id="target">
+  <p class="lead">We want to have the modals show on opposite sides of the canvas. We hide the backdrop, which also disbles the ability to click out of the modal using the backdrop (because it doesn't exist!). The modals have been changed from <code>position:fixed</code> to <code>position:absolute</code> so they remain within the #target container</p>
+  <div class="clearfix"></div>
+  <!-- Button trigger modal -->
+  <div type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal1" id="b1">Launch Left Modal</div>
+  <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#modal2" id="b2">Launch Right Modal</button>
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-left">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+          </button>
+          <h4 class="modal-title" id="modal1Label">Left Modal title</h4>
+
+        </div>
+        <div class="modal-body">Some Demo For Modal 1</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true" data-trigger="hover">
+    <div class="modal-dialog modal-sm modal-right">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+          </button>
+          <h4 class="modal-title" id="modal2Label">Right Modal title</h4>
+
+        </div>
+        <div class="modal-body">Some Demo For Modal 2</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

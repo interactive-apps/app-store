@@ -1,0 +1,21 @@
+<div class="col-md-12">
+  <div>
+    <form (ngSubmit)="onSubmit($event)">
+      <div class="form-group">
+        <label class="">Comment : </label>
+        <div class="">
+        <textarea type="text" style="width: 300px" class="form-control" required></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <ul class="list-inline">
+    <li><strong style="font-size: 0.7em; color: #0284CF;">{{ date }}</strong><br>
+      <p style="margin-left: 2%;"> {{ name + ' :  '}} {{ comment }}</p></li>
+  </ul>
+</div>

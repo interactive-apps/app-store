@@ -1,0 +1,5 @@
+<ul class="list-inline" *ngIf="totalLikes">
+  <li *ngIf="totalLikes > 1"><input type="button" class="btn btn-info" (click)="likeThisApp()" value="Like"><br><b>{{ ''+ totalLikes + 'Likes' }}</b></li>
+  <li *ngIf="totalLikes === 1"><input type="button" class="btn btn-info" (click)="likeThisApp()" value="Like"><b>{{ ''+ totalLikes + 'Like' }}</b></li>
+  <li *ngIf="totalLikes === 0"><input type="button" class="btn btn-info" (click)="likeThisApp()" value="Like"><b>be the first to like</b></li>
+</ul>

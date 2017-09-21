@@ -2,11 +2,11 @@
 <div class="container" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
   <div class="row" style="padding-top: 55px;">
     <div class="row">
-      <div class="form-group">
-        <input type="text" class="form-control" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px;margin-left: 25%;">
+      <div class="col-md-10"></div>
+      <div class="col-md-2" style="text-decoration: underline;">
+        <input type="text" class="form-control pull-right" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px;width: 100%; border: none; border-bottom: solid 1px">
+        <hr>
       </div>
-    </div>
-    <div class="row">
       <div class="col-md-12">
         <app-card [product]="app"  *ngFor="let app of apps | filterBy: appFilter"></app-card>
       </div>

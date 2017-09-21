@@ -24,6 +24,9 @@ import { CardSliderComponent } from './card/card-slider/card-slider.component';
 import { PageLikesComponent } from './page-likes/page-likes.component';
 import {AuthService} from './providers/auth.service';
 import {StarRatingModule} from 'angular-star-rating';
+import { FirebaseLikesComponent } from './firebase-likes/firebase-likes.component';
+import { FirebaseCommentsComponent } from './firebase-comments/firebase-comments.component';
+import { CommentsModalComponent } from './comments-modal/comments-modal.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import {StarRatingModule} from 'angular-star-rating';
     NavbarComponent,
     AppsNavComponent,
     CardSliderComponent,
-    PageLikesComponent
+    PageLikesComponent,
+    FirebaseLikesComponent,
+    FirebaseCommentsComponent,
+    CommentsModalComponent
   ],
   imports: [
     BrowserModule,

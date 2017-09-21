@@ -1,5 +1,5 @@
 #description-slide {
-  height: 150px; width: 100%; text-align: center; font-weight: 600px;
+  height: 200px; width: 100%; text-align: center; font-weight: 600px;
 }
 #description-slide p {
   padding: 10px;
@@ -16,24 +16,17 @@
   display: block;
 }
 
-.product-block {
-  display: block;
-  text-align: center;
-  height: 150px;
-}
+/*.product-block {*/
+  /*display: block;*/
+  /*text-align: center;*/
+  /*height: 200px;*/
+/*}*/
 
 .product-pic {
   position: relative;
   width:70px;
-  height: 80px;
-  margin: auto;
   text-align: center;
 
-}
-
-.product-pic img {
-  width: 70px;
-  height: 100px;
 }
 
 .product-footer {
@@ -52,7 +45,7 @@
 
 #product-name h3{
   text-align: center;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 600;
 }
 
@@ -135,4 +128,63 @@ iframe {
 
 .carousel-control.left {
   background-image: none !important;
+}
+
+
+td{
+  width: 15px;
+  height: 15px;
+}
+#rate-status{
+  margin-top: 0%;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 10px; }
+h1 { font-size: 1.5em; margin: 5px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 2px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input, /* show gold star when clicked */
+.rating { color: #0284CF; } /* hover previous stars in list */
+
+.rating > input + label /* hover current star when changing rating */
+.rating > input ~ label,
+.rating > label, /* lighten current selection */
+.rating > input ~ label { color: #FFED85;  }
+
+h6 {
+  color: #0284CF;
+  text-align: center;
+}
+
+#description-slide p {
+  font-weight: 600;
 }

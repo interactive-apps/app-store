@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AppsService} from '../apps.service';
+import {AuthService} from '../providers/auth.service';
+import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +13,10 @@ export class HomeComponent implements OnInit {
   public loading: boolean;
   public hasError: boolean;
   public appFilter: string;
+  private theRatingResult: any;
+  allApps: FirebaseObjectObservable<any[]>;
 
-  constructor(private appsService: AppsService) {
+  constructor(private appsService: AppsService,  private db: AngularFireDatabase) {
     this.loading = true;
     this.hasError = false;
     this.appFilter = '';
@@ -20,6 +24,18 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.appsService.all().subscribe(apps => {
+        this.allApps = this.db.object('/apps/' + apps.id);
+        const appsRes = this.allApps;
+        let obj = {};
+        appsRes.forEach(function (app) {
+          const myObj = app;
+          for (const count of app){
+            obj[count] = app;
+          }
+          // console.log(obj);
+          obj = app;
+          // this.apps = obj;
+        });
       this.apps = apps;
       this.loading = false;
       this.hasError = false;
@@ -28,6 +44,7 @@ export class HomeComponent implements OnInit {
       this.loading = false;
       this.hasError = true;
     });
+
   }
 
 }
