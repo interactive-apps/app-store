@@ -105,8 +105,7 @@
 .dropdown:hover .dropbtn {
 }
 .list-links{
-  margin-left: 4%;
-  width: 27%;
+  display: inline-block; width: 30%;
 }
 
 .hide-div{

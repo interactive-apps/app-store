@@ -1,44 +1,36 @@
 
 <div class="col-md-3">
-  <div class="card" style="width: 19.5rem; border: solid 1px rgb(216, 214, 214); border-radius: 0;">
-    <a routerLink="/apps/{{product.id}}"><img class="card-img-top" src="{{ product.cover_url}}" alt=".." height="190" width="100%"></a>
+  <div class="card" style="width: 19.5rem;">
+    <a routerLink="/apps/{{product.id}}"><img class="card-img-top" src="{{ product.logo_url}}" alt=".." height="150" width="100%" style="padding-left: 80px; padding-right: 80px; padding-top: 20px"></a>
     <div class="card-block" style="padding: 15px 15px;">
-      <h4 class="card-title" *ngIf="product.name">{{product.name}}</h4>
+      <div style="height: 45px;">
+        <h4 class="card-title" *ngIf="product.name">{{product.name}}</h4>
+      </div>
+      <div style="height: 70px">
+        <p class="card-text">{{ product.short_description }}</p>
+      </div>
       <div *ngIf="product.id">
         <app-star-rating [Id]="product.id"></app-star-rating>
       </div>
-      <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-        <div class="row" style="display: table; margin: auto; height: 30px;">
-        <ul class="list-inline" style="">
-        <li class="list-links">
-        <div class="dropdown">
-        <a class="dropbtn"><i class="fa fa-download"></i></a>
-        <div class="dropdown-content" *ngIf="product.download_url">
-        <a class="links" href="{{product.download_url}}" target="_blank">Download</a>
-        </div>
-        </div>
-        </li>
-        <li class="list-links">
-        <div class="dropdown">
-        <a class="dropbtn"><i *ngIf="product.demo_url" class="fa fa-eye"></i></a>
-        <div class="dropdown-content" *ngIf="product.demo_url">
-        <a href="{{product.demo_url}}" target="_blank">Demo</a>
-        </div>
-        </div>
-        </li>
-        <li class="list-links">
-        <div class="dropdown">
-        <a class="dropbtn"><i *ngIf="product.github_url" class="fa fa-github"></i></a>
-        <div class="dropdown-content" *ngIf="product.github_url">
-        <a href="{{product.github_url}}" target="_blank">Github</a>
-        </div>
-        </div>
-        </li>
-        </ul>
-      </div>
-      <a href="https://hisptanzania.org/">
-        <h6 style="height: 0.6em; margin-left: 4%; color: rgb(137, 134, 134); text-align: left">Hisp Tanzania</h6>
-      </a>
+      <!--<div class="row" style="display: table; margin: auto; height: 30px;">-->
+        <!--<ul class="list-inline" style="">-->
+          <!--<li class="list-links">-->
+          <!--<div class="dropdown">-->
+          <!--<a href="{{product.download_url}}" target="_blank"><i class="fa fa-download"></i></a>-->
+          <!--</div>-->
+          <!--</li>-->
+        <!--<li class="list-links">-->
+        <!--<div class="dropdown">-->
+        <!--<a href="{{product.demo_url}}" target="_blank"><i *ngIf="product.demo_url" class="fa fa-eye"></i></a>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="list-links">-->
+        <!--<div class="dropdown">-->
+        <!--<a href="{{product.github_url}}" target="_blank"><i *ngIf="product.github_url" class="fa fa-github"></i></a>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
     </div>
   </div>
 </div>
