@@ -1,37 +1,17 @@
 
 <div class="col-md-3">
-  <div class="card" style="width: 19.5rem;">
-    <a routerLink="/apps/{{product.id}}"><img class="card-img-top" src="{{ product.logo_url}}" alt=".." height="150" width="100%" style="padding-left: 80px; padding-right: 80px; padding-top: 20px"></a>
-    <div class="card-block" style="padding: 15px 15px;">
-      <div style="height: 45px;">
-        <h4 class="card-title" *ngIf="product.name">{{product.name}}</h4>
+  <a routerLink="/apps/{{product.id}}">
+    <div class="card" style="height: 230px; border: solid 1px #dddddd">
+      <div [style.backgroundColor]="product.bcolor" style="padding-bottom: -10px; border: solid 1px #dddddd;margin: 5px 5px 5px 5px; border-radius: 2px;"><img class="card-img-top" src="{{ product.logo_url}}" alt=".." style="display: table; margin: auto; margin-top: 3px; margin-bottom: 5px" height="115" width="110"></div>
+      <div class="card-block" style="padding: 1px 5px;">
+        <div>
+          <h4 class="card-title" style="text-align: left; display: table" *ngIf="product.name">{{product.name}}</h4>
+        </div>
+        <div *ngIf="product.id">
+          <app-star-rating [Id]="product.id"></app-star-rating>
+        </div>
       </div>
-      <div style="height: 70px">
-        <p class="card-text">{{ product.short_description }}</p>
-      </div>
-      <div *ngIf="product.id">
-        <app-star-rating [Id]="product.id"></app-star-rating>
-      </div>
-      <!--<div class="row" style="display: table; margin: auto; height: 30px;">-->
-        <!--<ul class="list-inline" style="">-->
-          <!--<li class="list-links">-->
-          <!--<div class="dropdown">-->
-          <!--<a href="{{product.download_url}}" target="_blank"><i class="fa fa-download"></i></a>-->
-          <!--</div>-->
-          <!--</li>-->
-        <!--<li class="list-links">-->
-        <!--<div class="dropdown">-->
-        <!--<a href="{{product.demo_url}}" target="_blank"><i *ngIf="product.demo_url" class="fa fa-eye"></i></a>-->
-        <!--</div>-->
-        <!--</li>-->
-        <!--<li class="list-links">-->
-        <!--<div class="dropdown">-->
-        <!--<a href="{{product.github_url}}" target="_blank"><i *ngIf="product.github_url" class="fa fa-github"></i></a>-->
-        <!--</div>-->
-        <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
     </div>
-  </div>
+  </a>
 </div>
 

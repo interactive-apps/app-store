@@ -1,15 +1,63 @@
 <app-navigation></app-navigation>
-<div class="container" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
-  <div class="row" style="padding-top: 55px;">
+<div class="container">
+  <div>
     <div class="row">
-      <div class="col-md-10"></div>
-      <div class="col-md-2" style="margin-bottom: 2%;">
-        <input type="text" class="pull-right" id="search-input" [(ngModel)]="appFilter" placeholder="Search our cool apps here" style="padding: 0px;width: 100%;">
-      </div>
-      <div class="col-md-12">
-        <app-card [product]="app"  *ngFor="let app of apps | filterBy: appFilter"></app-card>
+      <div id="thisSideNav" class="sidenav" style="margin-top: 70px">
+        <div>
+          <h4 style="margin-left: 20px; color: #4DB0E7">Dashboard</h4>
+        </div>
+        <div id="dashboard-list">
+          <a href="#" title="web apps only"><span class="fa fa-desktop"></span> Web apps <input style="margin-left: 4px" class="pull-right" title="tick to choose" (click)="getValue()" value="web" type="checkbox"></a>
+          <a href="#"><span class="fa fa-android"></span> Android apps <input style="margin-left: 4px"  class="pull-right" title="tick to choose"  (click)="getValue()" type="checkbox" value="android"></a>
+          <a href="#"><span class="fa fa-apple"></span> Ios apps <input style="margin-left: 4px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="ios"></a>
+          <a href="#"><span class="fa fa-windows"></span> Windows apps <input style="margin-left: 4px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="windows"></a>
+          <a href="#"><span class="fa fa-plus"></span> Plugins <input style="margin-left: 4px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="plugin"></a>
+          <a href="#"><span class="fa fa-plus"></span> Widgets <input style="margin-left: 4px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="widget"></a>
+        </div>
+        <input type="button" class="btn btn-success pull-right" id="check-all" (click)="checkAll();" value="check all">
+        <input type="button" class="btn btn-danger pull-right" id="uncheck-all" (click)="UnCheckAll();" value="clear all">
       </div>
     </div>
-    <hr>
+  </div>
+  <div id="content" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
+    <div class="row" style="padding-top: 85px;">
+
+      <div class="row">
+        <div class="col-md-2" id="open">
+          <ul class="list-inline">
+            <li class="list-inline">
+              <span class="fa fa-filter" title="open side menu" (click)="openNavigation()"></span>
+            </li>
+            <li *ngIf="listOfSelected[0] !== 'all categories'"><p>{{ listOfSelected }}</p></li>
+          </ul>
+        </div>
+        <div class="col-md-2" style="display: none" id="close">
+          <ul class="list-inline">
+            <li><span class="fa fa-filter" title="close side menu" (click)="closeNavigation()"></span></li>
+            <li *ngIf="listOfSelected[0] !== 'all categories'"><p>{{ listOfSelected }}</p></li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="title-area">
+            <h4 class="text-center">Welcome to <img src="assets/img/logo.png" alt=""> App Store</h4>
+            <!--<div class="separator separator-green">✻</div>-->
+            <h4 class="text-center">Enjoy the coolest apps.
+              <!-- Web apps, android, ios, windows apps, plugins, Widgets-->
+              <br>
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="form-group">
+            <input type="text" class="form-control input-lg" [(ngModel)]="appFilter" placeholder="Search our cool apps here">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <app-card [product]="app"  *ngFor="let app of apps | filterBy: [listOfSelected,appFilter]"></app-card>
+        </div>
+      </div>
+      <hr>
+    </div>
   </div>
 </div>

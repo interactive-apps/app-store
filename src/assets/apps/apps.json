@@ -2,6 +2,8 @@
   {
     "id": "453832331637287",
     "starId": 453832331637287,
+    "category": "web",
+    "bcolor": "#FB9761",
     "name": "Interactive Score Card",
     "version": "2.1",
     "compatibility": "21+",
@@ -22,6 +24,8 @@
     "id": "1860862194234681",
     "starId": 1860862194234681,
     "name": "Interactive Score Card Widget",
+    "category": "widget",
+    "bcolor": "#5A3392",
     "version": "2.1",
     "compatibility": "2.21+",
     "revision": "fc8f",
@@ -40,6 +44,8 @@
   {
     "id": "239181083239580",
     "starId": 239181083239580,
+    "category": "web",
+    "bcolor": "#1ad4db",
     "name": "Metabase",
     "version": "2.0",
     "compatibility": "2.25+",
@@ -60,6 +66,8 @@
   {
     "id": "943957522413660",
     "starId": 943957522413660,
+    "category": "web",
+    "bcolor": "#EAEDEF",
     "name": "Interactive Dashboard",
     "version": "1.0",
     "compatibility": "",
@@ -80,6 +88,8 @@
   {
     "id": "1341408295973905",
     "starId": 1341408295973905,
+    "category": "android",
+    "bcolor": "#FFFFFF",
     "name": "HISPTZ Touch",
     "version": "2.0",
     "compatibility": "",
@@ -98,6 +108,8 @@
   {
     "id": "488046014870137",
     "starId": 488046014870137,
+    "category":"android",
+    "bcolor": "#367DF3",
     "name": "Hisptz Touch Dashboard",
     "version": "1.0",
     "compatibility": "2.25-",
@@ -117,6 +129,8 @@
   {
     "id": "259073774573329",
     "starId": 259073774573329,
+    "category": "os",
+    "bcolor": "#4DB0E7",
     "name": "Pocket DHIS 2 OS",
     "version": "1.0",
     "compatibility": "",

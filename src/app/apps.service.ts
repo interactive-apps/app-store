@@ -43,6 +43,21 @@ export class AppsService {
     });
   }
 
+  findByCategory(category) {
+    return Observable.create(observer => {
+      this.all().subscribe(apps => {
+        const app = _.find(apps, ['category', category]);
+        if (app) {
+          observer.next(app);
+          observer.complete();
+        } else {
+          observer.error('App not found');
+        }
+
+      }, error => observer.error(error));
+    });
+  }
+
   reloadPage() {
     this.zone.runOutsideAngular(() => {
       location.reload();

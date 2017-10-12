@@ -3,6 +3,8 @@ import {AppsService} from '../apps.service';
 import {AuthService} from '../providers/auth.service';
 import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 
+declare var $: any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,6 +15,7 @@ export class HomeComponent implements OnInit {
   public loading: boolean;
   public hasError: boolean;
   public appFilter: string;
+  public listOfSelected= ['all categories'];
   private theRatingResult: any;
   allApps: FirebaseObjectObservable<any[]>;
 
@@ -23,6 +26,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('#close').css('display', 'none');
+    $('#open').css('display', 'block');
+
+    $('#check-all').css('display', 'block');
+    $('#uncheck-all').css('display', 'none');
     this.appsService.all().subscribe(apps => {
         this.allApps = this.db.object('/apps/' + apps.id);
         const appsRes = this.allApps;
@@ -47,4 +55,49 @@ export class HomeComponent implements OnInit {
 
   }
 
+  openNavigation() {
+    console.log('open sidebar');
+    $('#thisSideNav').css('width', '200px');
+    $('#content').css('marginLeft', '200px');
+    $('#close').css('display', 'block');
+    $('#open').css('display', 'none');
+  }
+
+  closeNavigation() {
+    console.log('close sidebar');
+    $('#thisSideNav').css('width', '0');
+    $('#content').css('marginLeft', '0');
+    $('#open').css('display', 'block');
+    $('#close').css('display', 'none');
+  }
+
+  checkAll () {
+    $(':checkbox').prop('checked', true);
+    $('#check-all').css('display', 'none');
+    $('#uncheck-all').css('display', 'block');
+    const selectedOnes = [];
+    $(':checked').each(function () {
+      selectedOnes.push(this.value);
+    });
+    this.listOfSelected = selectedOnes;
+}
+
+  UnCheckAll () {
+    $(':checkbox').prop('checked', false);
+    $('#check-all').css('display', 'block');
+    $('#uncheck-all').css('display', 'none');
+    this.listOfSelected = ['all categories'];
+  }
+
+  getValue() {
+    const selectedOnes = [];
+    if ($(':checked').length > 0 ) {
+      $(':checked').each(function () {
+        selectedOnes.push(this.value);
+      });
+    } else {
+      selectedOnes.push('all categories');
+    }
+    this.listOfSelected = selectedOnes;
+  }
 }
