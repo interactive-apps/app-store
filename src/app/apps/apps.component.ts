@@ -27,6 +27,7 @@ export class AppsComponent implements OnInit {
   public totalRatings3: any;
   public totalRatings4: any;
   public totalRatings5: any;
+  public mess1 = '';
   ratings: FirebaseListObservable<any[]>;
   private userDisplayName: string;
   public userEmail: string;
@@ -117,18 +118,23 @@ export class AppsComponent implements OnInit {
   }
 
   login(val) {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    this.authService.af.auth.onAuthStateChanged((user) => {
-      if (user != null) {
-        // User is logged in, use the user object for its info.
-        this.isLoggedIn = true;
-        this.userDisplayName = user.displayName;
-        this.userEmail = user.email;
-        this.ratings.push({ email: user.email, rateValue: val });
-      } else {
-        // User is not logged in, redirect to where you need to.
-      }
-    });
+    this.ratings.push({ email: 'josephatjulius24@gmail.com', rateValue: val });
+    // this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    // this.authService.af.auth.onAuthStateChanged((user) => {
+    //   if (user != null) {
+    //     // User is logged in, use the user object for its info.
+    //     this.isLoggedIn = true;
+    //     this.userDisplayName = user.displayName;
+    //     this.userEmail = user.email;
+    //     this.ratings.push({ email: 'josephatjulius24@gmail.com', rateValue: val });
+    //   } else {
+    //     // User is not logged in, redirect to where you need to.
+    //   }
+    // });
+  }
+
+  setNewIntroduction() {
+    this.mess1 = 'introduction to '
   }
   // Reloading the page
   reloadPage() {

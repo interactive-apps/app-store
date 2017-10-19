@@ -8,7 +8,7 @@
         <span class="icon-bar bar2"></span>
         <span class="icon-bar bar3"></span>
       </button>
-      <a routerLink="" class="navbar-brand" style="padding-top: 2px;">
+      <a routerLink="" onclick="setNewIntroduction()" class="navbar-brand" style="padding-top: 2px;">
         <ul class="list-inline">
           <li><img src="assets/img/logo.png" alt=""></li>
           <li><span style="font-weight: bolder; color: #0284CF;">Home</span></li>
@@ -156,7 +156,7 @@
                 <!--</div>-->
               </div>
               <div class="col-md-4" style="display: table;  margin-top: 2%;" *ngIf="app.id">
-                <app-firebase-comments [Id]="app.id"></app-firebase-comments>
+                <!--<app-firebase-comments [Id]="app.id"></app-firebase-comments>-->
               </div>
             </div>
           </div>

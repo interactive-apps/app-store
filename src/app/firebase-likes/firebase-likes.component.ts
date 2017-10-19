@@ -26,15 +26,17 @@ export class FirebaseLikesComponent implements OnInit {
   }
 
   likeThisApp() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    this.authService.af.auth.onAuthStateChanged((user) => {
-      if (user != null) {
-        // User is logged in, use the user object for its info.
-        this.likes.push({ email: user.email, likeDate: '19-09-2017', displayName: user.displayName});
-      } else {
-        // User is not logged in, redirect to where you need to.
-      }
-    });
+    this.likes.push({ email: 'josephatjulius24@gmail.com', likeDate: '19-09-2017', displayName: 'Josephat Julius M'});
+
+    // this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    // this.authService.af.auth.onAuthStateChanged((user) => {
+    //   if (user != null) {
+    //     // User is logged in, use the user object for its info.
+    //     this.likes.push({ email: user.email, likeDate: '19-09-2017', displayName: user.displayName});
+    //   } else {
+    //     // User is not logged in, redirect to where you need to.
+    //   }
+    // });
   }
 
 }

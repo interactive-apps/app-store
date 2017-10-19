@@ -190,3 +190,10 @@ h6 {
 #description-slide p {
   font-weight: 600;
 }
+
+.col-md-3, .col-md-4 {
+  padding-left: 5px;
+  position: relative;
+  min-height: 1px;
+  padding-right: 5px;
+}

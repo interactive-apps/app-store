@@ -27,13 +27,11 @@ export class CardComponent implements OnInit {
   public totalRatings3: any;
   public totalRatings4: any;
   public totalRatings5: any;
+  private theId: any;
   ratings: FirebaseListObservable<any[]>;
   public loading: boolean;
   public hasError: boolean;
   public appFilter: string;
-  public theClass = 'carousel';
-  public chevClassRight = '';
-  public chevClassLeft = '';
   public cardRateRes: any;
 
   constructor(private appsService: AppsService,
@@ -148,6 +146,18 @@ export class CardComponent implements OnInit {
     $('.owl-dot').click(function () {
       $('.landing-carousel').trigger('to.owl.carousel', [$(this).index(), 300]);
     });
+  }
+
+  displayFunc(id) {
+    $('#descriptionId' + id).css('display', 'block');
+    $('#defaultId' + id).css('display', 'none');
+    this.theId = id;
+  }
+
+  hideDescFunc(id) {
+    $('#descriptionId' + id).css('display', 'none');
+    $('#defaultId' + id).css('display', 'block');
+    this.theId = id;
   }
 
   login(val, id) {

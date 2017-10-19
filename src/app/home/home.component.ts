@@ -15,7 +15,10 @@ export class HomeComponent implements OnInit {
   public loading: boolean;
   public hasError: boolean;
   public appFilter: string;
+  public title1 = 'Welcome to ';
+  public title2 = 'Enjoy the coolest apps'
   public listOfSelected= ['all categories'];
+  public appTypes= ['all categories'];
   private theRatingResult: any;
   allApps: FirebaseObjectObservable<any[]>;
 
@@ -26,6 +29,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (performance.navigation.type === 1) {
+      this.title1 = 'You are still at ';
+      this.title2 = 'Enjoy the coolest apps';
+      console.log( 'This page is reloaded' );
+    } else {
+      this.title1 = 'Welcome to ';
+      this.title2 = 'Enjoy the coolest apps';
+      console.log( 'This page is not reloaded');
+    }
     $('#close').css('display', 'none');
     $('#open').css('display', 'block');
 
@@ -76,10 +88,27 @@ export class HomeComponent implements OnInit {
     $('#check-all').css('display', 'none');
     $('#uncheck-all').css('display', 'block');
     const selectedOnes = [];
+    const appTypesSelected = [];
     $(':checked').each(function () {
-      selectedOnes.push(this.value);
+      appTypesSelected.push(this.value);
+      if (this.value === 'web') {
+        selectedOnes.push(' Web Apps');
+      } else if (this.value === 'ios') {
+        selectedOnes.push(' Ios Apps');
+      } else if (this.value === 'window') {
+        selectedOnes.push(' Windows Apps');
+      } else if (this.value === 'os') {
+        selectedOnes.push(' Os Apps');
+      } else if (this.value === 'android') {
+        selectedOnes.push(' Android Apps');
+      } else if (this.value === 'plugin') {
+        selectedOnes.push(' Plugins');
+      } else if (this.value === 'widget') {
+        selectedOnes.push(' Widgets');
+      }
     });
-    this.listOfSelected = selectedOnes;
+    this.listOfSelected = appTypesSelected;
+    this.appTypes = selectedOnes;
 }
 
   UnCheckAll () {
@@ -87,17 +116,43 @@ export class HomeComponent implements OnInit {
     $('#check-all').css('display', 'block');
     $('#uncheck-all').css('display', 'none');
     this.listOfSelected = ['all categories'];
+    this.appTypes = ['all categories'];
   }
 
   getValue() {
-    const selectedOnes = [];
+    const selectedOnes = []; const appTypesSelected = [];
     if ($(':checked').length > 0 ) {
       $(':checked').each(function () {
-        selectedOnes.push(this.value);
+        appTypesSelected.push(this.value);
+        if (this.value === 'web') {
+          selectedOnes.push(' Web Apps');
+        } else if (this.value === 'ios') {
+          selectedOnes.push(' Ios Apps');
+        } else if (this.value === 'window') {
+          selectedOnes.push(' Windows Apps');
+        } else if (this.value === 'os') {
+          selectedOnes.push(' Os Apps');
+        } else if (this.value === 'android') {
+          selectedOnes.push(' Android Apps');
+        } else if (this.value === 'plugin') {
+          selectedOnes.push(' Plugins');
+        } else if (this.value === 'widget') {
+          selectedOnes.push(' Widgets');
+        }
       });
     } else {
       selectedOnes.push('all categories');
+      appTypesSelected.push('all categories');
     }
-    this.listOfSelected = selectedOnes;
+    this.listOfSelected = appTypesSelected;
+    this.appTypes = selectedOnes;
+  }
+
+  changeTitle2(id) {
+    if (id === 1) {
+      this.title2 = 'the home of the coolest apps';
+    } else if (id === 2) {
+      this.title2 = 'enjoy the coolest apps';
+    }
   }
 }

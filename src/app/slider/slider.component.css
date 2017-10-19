@@ -1,27 +1,13 @@
-.carousel-inner{
-  background-color: #FFFFFF;
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
-  right: 2;
-}
+/*[class^="icon-"]::before, [class*=" icon-"]::before {*/
+  /*text-decoration: inherit;*/
+  /*display: inline-block;*/
+  /*margin-top: 15px !important;*/
+/*}*/
 
-.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
-  left: 2;
-}
-
-.item {
-  background-color: #ffffff;
-}
-
-.carousel-control {
-  background-color: transparent;
-}
-
-.carousel-control.right {
-  background-image: none !important;
-}
-
-.carousel-control.left {
-  background-image: none !important;
-}

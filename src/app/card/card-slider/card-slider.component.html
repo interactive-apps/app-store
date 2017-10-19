@@ -1,18 +1,10 @@
-<div id="appstore" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="{{product.cover_url}}" alt="">
-      <div class="carousel-caption">
-        <h3 *ngIf="product.name">{{product.name}}</h3>
-        <p *ngIf="product.short_description">{{product.short_description}}</p>
-      </div>
-    </div>
-    <div class="item" *ngIf="product.id==='score_card'">
-      <iframe width="780" height="420" src="https://www.youtube.com/embed/2AHZZpHvspE?autoplay=1" frameborder="0" allowfullscreen></iframe>
-      <div class="carousel-caption">
-        <h3 *ngIf="product.name">{{product.name}}</h3>
-        <p *ngIf="product.short_description">{{product.short_description}}</p>
-      </div>
-    </div>
-  </div>
+
+<div class="section section-header landing-carousel owl-carousel" style="border-radius: 4px; border: 10px solid #EAEDEF;">
+  <div style="background-image: url('assets/img/products/score-card-cover.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
+  <div style="background-image: url('assets/img/products/score-card-widget-cover.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
+  <div style="background-image: url('assets/img/products/idashboard-cover.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
+  <div style="background-image: url('assets/img/products/dhis2touch-cover.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
+
+  <div style="background-image: url('assets/img/products/idashboard-cover.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
+  <div style="background-image: url('assets/img/products/hisptz-touch-dashboard.png'); height: 250px; width: 100%; background-repeat: no-repeat; background-size: cover;" class="parallax"></div>
 </div>

@@ -45,7 +45,7 @@ h1 { font-size: 1em; margin: 1px; }
 .rating > input + label /* hover current star when changing rating */
 .rating > input ~ label,
 .rating > label, /* lighten current selection */
-.rating > input ~ label { color: #FFED85;  }
+.rating > input ~ label { color: #1AD4DB;  }
 
 h6 {
   color: #0284CF;

@@ -64,10 +64,10 @@ h5{
 }
 
 .sidenav input {
-  margin-right: 30px;
+  margin-right: 35px;
 }
 #check-all, #uncheck-all {
-  height: 25px; padding: 2px;
+  height: 28px; padding: 2px 2px; width: 60px;
   color: #FFFFFF;
   text-transform: lowercase;
   margin-right: 30px;
@@ -76,10 +76,12 @@ h5{
 
 #check-all {
   background-color: #0284CF;
+  border: 1px solid #0284CF;
 }
 
 #uncheck-all {
   background-color: rgb(201, 48, 44);
+  border: 1px solid rgb(201, 48, 44);
 }
 
 .fa-filter {
