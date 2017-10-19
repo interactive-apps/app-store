@@ -108,7 +108,19 @@ export class HomeComponent implements OnInit {
       }
     });
     this.listOfSelected = appTypesSelected;
-    this.appTypes = selectedOnes;
+    this.appTypes = selectedOnes; let formattedArray = [];
+    if (selectedOnes.length > 1) {
+      for (let count = 0; count < selectedOnes.length; count++) {
+        if ( count === selectedOnes.length - 1 ) {
+          formattedArray.push(' and ' + selectedOnes[count]);
+        } else {
+          formattedArray.push(selectedOnes[count]);
+        }
+      }
+    } else {
+      formattedArray = selectedOnes;
+    }
+    this.appTypes = formattedArray;
 }
 
   UnCheckAll () {
@@ -146,9 +158,23 @@ export class HomeComponent implements OnInit {
     }
     this.listOfSelected = appTypesSelected;
     this.appTypes = selectedOnes;
+    let formattedArray = [];
+    if (selectedOnes.length > 1) {
+      for (let count = 0; count < selectedOnes.length; count++) {
+        if ( count === selectedOnes.length - 1 ) {
+          formattedArray.push(' and ' + selectedOnes[count]);
+        } else {
+          formattedArray.push(selectedOnes[count]);
+        }
+      }
+    } else {
+      formattedArray = selectedOnes;
+    }
+    this.appTypes = formattedArray;
   }
 
   getCategory(val) {
+    $(':checkbox').prop('checked', false);
     const selectedOnes = []; const appTypesSelected = [];
     appTypesSelected.push(val);
     if (val === 'web') {
