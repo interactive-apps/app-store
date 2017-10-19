@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   public hasError: boolean;
   public appFilter: string;
   public title1 = 'Welcome to ';
-  public title2 = 'Enjoy the coolest apps'
+  public title2 = 'enjoy the coolest apps'
   public listOfSelected= ['all categories'];
   public appTypes= ['all categories'];
   private theRatingResult: any;
@@ -30,12 +30,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     if (performance.navigation.type === 1) {
-      this.title1 = 'You are still at ';
-      this.title2 = 'Enjoy the coolest apps';
+      this.title1 = 'You are at ';
+      this.title2 = 'enjoy the coolest apps';
       console.log( 'This page is reloaded' );
     } else {
       this.title1 = 'Welcome to ';
-      this.title2 = 'Enjoy the coolest apps';
+      this.title2 = 'enjoy the coolest apps';
       console.log( 'This page is not reloaded');
     }
     $('#close').css('display', 'none');
@@ -148,11 +148,35 @@ export class HomeComponent implements OnInit {
     this.appTypes = selectedOnes;
   }
 
+  getCategory(val) {
+    const selectedOnes = []; const appTypesSelected = [];
+    appTypesSelected.push(val);
+    if (val === 'web') {
+      selectedOnes.push(' Web Apps');
+    } else if (val === 'ios') {
+      selectedOnes.push(' Ios Apps');
+    } else if (val === 'window') {
+      selectedOnes.push(' Windows Apps');
+    } else if (val === 'os') {
+      selectedOnes.push(' Os Apps');
+    } else if (val === 'android') {
+      selectedOnes.push(' Android Apps');
+    } else if (val === 'plugin') {
+      selectedOnes.push(' Plugins');
+    } else if (val === 'widget') {
+      selectedOnes.push(' Widgets');
+    }
+    this.listOfSelected = appTypesSelected;
+    this.appTypes = selectedOnes;
+  }
+
   changeTitle2(id) {
     if (id === 1) {
       this.title2 = 'the home of the coolest apps';
     } else if (id === 2) {
       this.title2 = 'enjoy the coolest apps';
+    } else if (id === 3) {
+      this.title2 = 'the store of the coolest apps, apps of the future';
     }
   }
 }
