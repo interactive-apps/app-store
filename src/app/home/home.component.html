@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-12">
           <div class="form-group">
-            <input type="text" class="form-control input-lg" [(ngModel)]="appFilter" placeholder="Search">
+            <input type="text" class="form-control input-lg" [(ngModel)]="appFilter" placeholder="Search apps">
           </div>
         </div><br>
 
@@ -17,19 +17,20 @@
         </div>
 
         <div id="dashboard-list">
-          <div><a href="#" title="web apps only"><b (click)="getCategory('web')"><span class="fa fa-desktop"></span> Web apps </b><input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" value="web" type="checkbox"></a></div>
+          <div><a href="#" title="web apps only"><b (click)="getCategory('web')"><span class="fa fa-desktop"></span> Web apps </b><input style="margin-left: 5px" class="pull-right" id="web-apps" title="tick to choose" (click)="getValue()" value="web" type="checkbox"></a></div>
           <div><a href="#"><b (click)="getCategory('android')"><span class="fa fa-android"></span> Android apps </b> <input style="margin-left: 5px"  class="pull-right" title="tick to choose"  (click)="getValue()" type="checkbox" value="android"></a></div>
           <div><a href="#"><b (click)="getCategory('ios')"><span class="fa fa-apple"></span> Ios apps </b><input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="ios"></a></div>
           <div><a href="#"><b (click)="getCategory('window')"><span class="fa fa-windows"></span> Windows apps </b><input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="window"></a></div>
           <div><a href="#"><b (click)="getCategory('plugin')"><span class="fa fa-plus"></span> Plugins </b><input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="plugin"></a></div>
           <div><a href="#"><b (click)="getCategory('widget')"><span class="fa fa-plus"></span> Widgets </b> <input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="widget"></a></div>
+          <div><a href="#"><b (click)="getCategory('os')"><span class="fa fa-plus"></span> Os </b> <input style="margin-left: 5px" class="pull-right" title="tick to choose" (click)="getValue()" type="checkbox" value="os"></a></div>
         </div>
         <button type="button" class="btn btn-success pull-right" id="check-all" (click)="checkAll();" title="check all"><i class="fa fa-check-square" aria-hidden="true"></i>all</button>
-        <button type="button" class="btn btn-danger pull-right" id="uncheck-all" (click)="UnCheckAll();" title="uncheck all"><i class="fa fa-times-rectangle" aria-hidden="true"></i>all</button>
+        <!--<button type="button" class="btn btn-danger pull-right" id="uncheck-all" (click)="UnCheckAll();" title="uncheck all"><i class="fa fa-times-rectangle" aria-hidden="true"></i>all</button>-->
       </div>
     </div>
   </div>
-  <div id="content" *ngIf="!loading && !hasError" style="background-color: #FFFFFF;">
+  <div id="content" *ngIf="!loading && !hasError" style="background-color: #FFFFFF; margin-left: 200px">
     <div class="row" style="padding-top: 5px;">
       <div id="introduction">
         <div class="title-area">
@@ -48,15 +49,19 @@
         <div class="col-md-10" style="height: 25px; margin-left: 15px" id="open">
           <ul class="list-inline">
             <li class="list-inline">
-              <span class="fa fa-filter" title="filter from side menu" (click)="openNavigation()"></span>
+              <!--<span class="fa fa-filter" title="filter from side menu" (click)="openNavigation()"></span>-->
             </li>
             <li *ngIf="appTypes[0] !== 'all categories'"><p>{{ appTypes }}</p></li>
+            <li *ngIf="appTypes[0] === 'all categories'"><p> All apps (uncategorised)</p></li>
           </ul>
         </div>
         <div class="col-md-10" style="display: none; height: 25px; margin-left: 15px" id="close">
           <ul class="list-inline">
-            <li><span class="fa fa-filter" title="close side menu" (click)="closeNavigation()"></span></li>
+            <li>
+              <!--<span class="fa fa-filter" title="close side menu" (click)="closeNavigation()"></span>-->
+            </li>
             <li *ngIf="appTypes[0] !== 'all categories'"><p>{{ appTypes }}</p></li>
+            <li *ngIf="appTypes[0] === 'all categories'"><p> All apps without categories</p></li>
           </ul>
         </div>
       </div>

@@ -99,7 +99,7 @@
     "version": "2.0",
     "compatibility": "",
     "revision": "e70f0",
-    "logo_url": "assets/img/products/dhis2touch.png",
+    "logo_url": "assets/img/products/touch.png",
     "cover_url": "assets/img/products/dhis2touch-cover.png",
     "github_url" : "https://github.com/hisptz/dhis-2-touch.git",
     "youtube_url":"",
@@ -130,6 +130,28 @@
     "short_description": "Flexible and Lightweight",
     "description": "Flexible and Lightweight",
     "features": ["Ability to instantly with one-click, switch between table, chart and map visualization","Highest resolutions charts possible( powered by highcharts)","Extremely Lightweight and can operate on low bandwidth"
+    ]
+  },
+  {
+    "id": "488046014870138",
+    "starId": 488046014870138,
+    "category":"web",
+    "bcolor": "#1AD4DB",
+    "color": "#FFFFFF",
+    "name": "Indicator Search",
+    "version": "1.0",
+    "compatibility": "2.25+",
+    "revision": "",
+    "logo_url": "assets/img/products/indicator_logo.png",
+    "cover_url": "assets/img/products/indicator_search.png",
+    "github_url" : "https://github.com/hisptz/indicator-search",
+    "download_url": "assets/apps/zip/indicator_search.zip",
+    "youtube_url":"",
+    "facebook_url": "",
+    "demo_url": "",
+    "short_description": "Flexible and Lightweight app, for you, to understand the indicators defined in your DHIS2 HMIS",
+    "description": "Flexible and Lightweight app, for you, to understand the indicators defined in your DHIS2 HMIS",
+    "features": ["Higher interactivity, with no advance skills from an expert","Highest resolutions charts when in need for visualization (powered by highcharts)","Extremely Lightweight and can operate on low bandwidth"
     ]
   },
   {

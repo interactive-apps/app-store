@@ -29,20 +29,61 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('#thisSideNav').css('width', '200px');
+    $('#content').css('marginLeft', '200px');
+    $(':checkbox').prop('checked', true);
+    $('#check-all').css('display', 'none');
+    $('#uncheck-all').css('display', 'block');
+    const selectedOnes = [];
+    const appTypesSelected = [];
+    $(':checked').each(function () {
+      appTypesSelected.push(this.value);
+      if (this.value === 'web') {
+        selectedOnes.push(' Web Apps');
+      } else if (this.value === 'ios') {
+        selectedOnes.push(' Ios Apps');
+      } else if (this.value === 'window') {
+        selectedOnes.push(' Windows Apps');
+      } else if (this.value === 'os') {
+        selectedOnes.push(' Os Apps');
+      } else if (this.value === 'android') {
+        selectedOnes.push(' Android Apps');
+      } else if (this.value === 'plugin') {
+        selectedOnes.push(' Plugins');
+      } else if (this.value === 'widget') {
+        selectedOnes.push(' Widgets');
+      }
+    });
+    this.listOfSelected = appTypesSelected;
+    this.appTypes = selectedOnes; let formattedArray = [];
+    if (selectedOnes.length > 1) {
+      for (let count = 0; count < selectedOnes.length; count++) {
+        if ( count === selectedOnes.length - 1 ) {
+          formattedArray.push(' and ' + selectedOnes[count]);
+        } else {
+          formattedArray.push(selectedOnes[count]);
+        }
+      }
+    } else {
+      formattedArray = selectedOnes;
+    }
+    this.appTypes = formattedArray;
     if (performance.navigation.type === 1) {
-      this.title1 = 'You are at ';
-      this.title2 = 'enjoy the coolest apps';
-      console.log( 'This page is reloaded' );
+      this.title1 = 'Welcome to ';
+      this.title2 = 'Search, Get intro, try it, install and blow minds with awesomeness...';
     } else {
       this.title1 = 'Welcome to ';
-      this.title2 = 'enjoy the coolest apps';
-      console.log( 'This page is not reloaded');
+      this.title2 = 'Search, Get intro, try it, install and blow minds with awesomeness...';
     }
-    $('#close').css('display', 'none');
-    $('#open').css('display', 'block');
 
-    $('#check-all').css('display', 'block');
-    $('#uncheck-all').css('display', 'none');
+    let checkCount = 0;
+    $(':checked').each(function () {
+      checkCount++;
+    });
+    if (checkCount < 4) {
+      $('#check-all').css('display', 'block');
+      $('#uncheck-all').css('display', 'none');
+    }
     this.appsService.all().subscribe(apps => {
         this.allApps = this.db.object('/apps/' + apps.id);
         const appsRes = this.allApps;
@@ -68,7 +109,6 @@ export class HomeComponent implements OnInit {
   }
 
   openNavigation() {
-    console.log('open sidebar');
     $('#thisSideNav').css('width', '200px');
     $('#content').css('marginLeft', '200px');
     $('#close').css('display', 'block');
@@ -76,7 +116,6 @@ export class HomeComponent implements OnInit {
   }
 
   closeNavigation() {
-    console.log('close sidebar');
     $('#thisSideNav').css('width', '0');
     $('#content').css('marginLeft', '0');
     $('#open').css('display', 'block');
@@ -86,7 +125,7 @@ export class HomeComponent implements OnInit {
   checkAll () {
     $(':checkbox').prop('checked', true);
     $('#check-all').css('display', 'none');
-    $('#uncheck-all').css('display', 'block');
+    // $('#uncheck-all').css('display', 'block');
     const selectedOnes = [];
     const appTypesSelected = [];
     $(':checked').each(function () {
@@ -132,8 +171,9 @@ export class HomeComponent implements OnInit {
   }
 
   getValue() {
-    const selectedOnes = []; const appTypesSelected = [];
+    const selectedOnes = []; const appTypesSelected = []; let checkCount = 0;
     if ($(':checked').length > 0 ) {
+      checkCount = $(':checked').length;
       $(':checked').each(function () {
         appTypesSelected.push(this.value);
         if (this.value === 'web') {
@@ -152,6 +192,11 @@ export class HomeComponent implements OnInit {
           selectedOnes.push(' Widgets');
         }
       });
+
+      if (checkCount < 2) {
+        $('#check-all').css('display', 'block');
+        $('#uncheck-all').css('display', 'none');
+      }
     } else {
       selectedOnes.push('all categories');
       appTypesSelected.push('all categories');
@@ -198,11 +243,11 @@ export class HomeComponent implements OnInit {
 
   changeTitle2(id) {
     if (id === 1) {
-      this.title2 = 'the home of the coolest apps';
+      this.title2 = 'Search, Get intro, try it, install and blow minds with awesomeness...';
     } else if (id === 2) {
-      this.title2 = 'enjoy the coolest apps';
+      this.title2 = 'the Innovations one-stop center';
     } else if (id === 3) {
-      this.title2 = 'the store of the coolest apps, apps of the future';
+      this.title2 = 'the Innovations one-stop center';
     }
   }
 }
