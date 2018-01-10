@@ -1,0 +1,9 @@
+.card {
+  border: none;
+}
+
+.col-md-3 {
+  position: relative;
+  min-height: 1px;
+   padding: 4px;
+}

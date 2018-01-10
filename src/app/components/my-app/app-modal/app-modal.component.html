@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div  id="myModal" style="position: fixed" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row">
+              <div class="col-md-10">
+                <h5 class="modal-title"><img src="{{ app.logo_url }}" height="50px" width="50px"> {{ app.name }}</h5>
+              </div>
+              <div class="col-md-2">
+                <a type="button" class="close" routerLink="/" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="container" style="border: none;">
+              <div class="row">
+                <div class="tabbable-panel">
+                  <div class="tabbable-line">
+                    <ul class="nav nav-tabs ">
+                      <li class="active">
+                        <a href="#overview" data-toggle="tab">
+                          Overview</a>
+                      </li>
+                      <li>
+                        <a href="#characteristics" data-toggle="tab">
+                          Features</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" style="">
+                      <div class="tab-pane active" id="overview">
+                        <div class="container">
+                          <div class="col-md-8" [style.background]="'url(' + app.cover_url+ ')'" style="height: 300px; background-repeat: no-repeat;"></div>
+                          <div class="col-md-4">
+                            <div class="panel-body" style="border: none; background-color: #FFFFFF; height: 300px">
+                              <h4><b>Description</b></h4>
+                              <p class="text-justify">{{app.description}}</p>
+                              <ul class="list-inline">
+                                <li><small><b>Version:</b> {{app.version}}</small></li>
+                                <li *ngIf="app.compatibility"><small><b>Compatibility: </b> Compatible with DHIS V {{app.compatibility}}</small></li>
+                                <li *ngIf="app.revision"><small><b>Revision:</b> {{app.revision}}</small></li>
+                                <li><small><b>License:</b> <a target="_blank" style="color: #0189D6;" href="https://opensource.org/licenses/bsd-license.php">BSD License</a></small></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="characteristics">
+                        <div class="panel app-description-panel"  style="height: auto;">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="panel-body" style="background-color: #FFFFFF;height: 300px; overflow: auto">
+                                <ul class="list-unstyled" *ngFor="let item of app.features">
+                                  <li>
+                                    <div class="row">
+                                      <div class="col-md-2 col-xs-2 col-sm-2" style="color: #008EDD; padding-left: 4%;"><span class=""><i class="fa fa-check-square"></i></span></div>
+                                      <div class="col-md-10 col-xs-10 col-sm-10" style="padding-left: 0px;">{{item}}</div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-md-8"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <ul class="list-inline pull-left">
+              <li><a href="{{app.download_url}}" class="btn btn-sm"><i class="fa fa-download"></i> download</a></li>
+              <li *ngIf="app.demo_url"><a href="{{app.demo_url}}" target="_black" class="btn btn-sm"><i class="fa fa-eye"></i> view demo</a></li>
+              <li *ngIf="app.github_url"><a href="{{app.github_url}}" target="_blank" class="btn btn-sm"><i class="fa fa-github"></i> View on github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.container {
+  border: solid 1px #EAEDEF;
+  border-radius: 2px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: block;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* margin-right: -15px; */
+  /* margin-left: -15px; */
+}
+
+.form-control {
+  margin-bottom: 0em;
+}

@@ -1,14 +1,14 @@
-import { AppStore2Page } from './app.po';
+import { AppsPage } from './app.po';
 
-describe('app-store2 App', () => {
-  let page: AppStore2Page;
+describe('apps App', () => {
+  let page: AppsPage;
 
   beforeEach(() => {
-    page = new AppStore2Page();
+    page = new AppsPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });

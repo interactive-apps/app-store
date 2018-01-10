@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 30px;">
+  <div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-12">
+      <div style="background-color: #00abc0;">
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-md-2">
+
+          </div>
+          <div class="col-md-8">
+            <h4 style="text-align: center; color: #FFFFFF;">Welcome to HISP Tanzania,<img src="assets/img/logo.png" style="margin-left: 15px;"> Innovations one-stop center</h4>
+            <h4 style="text-align: center; color: #FFFFFF;">Search, Get intro, try it, install and blow minds with awesomeness...</h4>
+          </div>
+          <div class="col-md-2">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" [(ngModel)]="appFilter" placeholder="Search apps">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <app-card [app] ="app"  *ngFor="let app of apps | filterBy: [appTypes, appFilter]"></app-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="footer" style="margin-top: 40px;"></div>
+  </div>
+</div>
+
+<app-app-modal [appId]="id"></app-app-modal>
+

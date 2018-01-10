@@ -1,138 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AppStore</title>
-  <script type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <title>Apps</title>
+  <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=453832331637287";
-  fjs.parentNode.insertBefore(js, fjs);
-//  453832331637287|RVsgbutELCrsyvI9WeA55BVTYYU
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1860862194234681";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=239181083239580";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=943957522413660";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1341408295973905";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=488046014870137";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=259073774573329";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=453832331637287";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script type="text/javascript">(function(d, t, e, m){
-
-  // Async Rating-Widget initialization.
-  window.RW_Async_Init = function(){
-
-    RW.init({
-      huid: "366688",
-      uid: "1ee06a2d0437185a2b4900058e9b6127",
-      options: { "style": "oxygen" }
-    });
-    RW.render();
-  };
-  // Append Rating-Widget JavaScript library.
-  var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-    l = d.location, ck = "Y" + t.getFullYear() +
-      "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
-    f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-    a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-  if (d.getElementById(id)) return;
-  rw = d.createElement(e);
-  rw.id = id; rw.async = true; rw.type = "text/javascript";
-  rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-  s.parentNode.insertBefore(rw, s);
-}(document, new Date(), "script", "rating-widget.com/"));</script>
-
-
-<script type="text/javascript">
-  wpac_init = window.wpac_init || [];
-  wpac_init.push({
-    widget: 'Rating',
-    id: 1,
-    el: 'wpac-rating3',
-    html: '{{?it.count>0}} {{=it.rating}}{{?}} {{=it.count}} {{=it.votes}} {{=it.stars}} {{?it.count>0}}{{?}}',
-    stars: 5,
-    color: '00abc0',
-    size: 11
-  });
-  (function() {
-    if ('WIDGETPACK_LOADED' in window) return;
-    WIDGETPACK_LOADED = true;
-    var mc = document.createElement('script');
-    mc.type = 'text/javascript';
-    mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
-  })();
-</script>
-<app-root>
-  <!--<div style="padding-top: 10%; text-align: center;">-->
-    <!--&lt;!&ndash;<img src="assets/img/balls-3.svg" alt="">&ndash;&gt;-->
-    <!--<h2>Welcome to <span style="color: #61B9E9;"><b>HISP</b></span> <span style="color: #FDD301;">Tanzania</span><b style="color: #61B9E9;"> AppStore</b></h2>-->
-  <!--</div>-->
-</app-root>
+  <app-root>
+    <div style="padding-top: 10%; text-align: center;">
+      <img src="assets/img/balls-3.svg" alt="">
+      <h2>Welcome to <span style="color: #61B9E9;"><b>HISP</b></span> <span style="color: #FDD301;">Tanzania</span><b style="color: #61B9E9;"> AppStore</b></h2>
+    </div>
+  </app-root>
 </body>
 </html>
