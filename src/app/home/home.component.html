@@ -1,0 +1,57 @@
+<!--header-->
+<div id="home-header">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>LOGO</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of header-->
+
+<router-outlet></router-outlet>
+
+<div id="home-body">
+  <!--slide show-->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="carousel-container">
+            <div style="font-size: 150px; font-weight: bolder; color: #888888;">{{ activeSlide }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of slide show-->
+
+  <!--categories options-->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="app-categories-options">
+          <a href="" class="active">All Categories</a>
+          <a href="">Android</a>
+          <a href="">IOS</a>
+          <a href="">Web based</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of categories options-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="app-categories-list">
+          <div class="app-category-item">
+            <app-app-category-item></app-app-category-item>
+          </div>
+          <div class="app-category-item">
+            <app-app-category-item></app-app-category-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

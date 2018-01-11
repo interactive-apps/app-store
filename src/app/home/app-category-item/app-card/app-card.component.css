@@ -1,0 +1,33 @@
+.app-card {
+  padding: 5px;
+}
+.app-card-image {
+  background-color: #eeeeee;
+  height: 150px;
+}
+
+.app-card-text {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-rating {
+  display: flex;
+}
+
+.card-rating span {
+  margin-right: 2px;
+}
+
+.card-rating span img {
+  display: block;
+  margin: auto;
+  height: 12px;
+}
+
+@media (max-width: 500px) {
+  .app-card-image {
+    height: 250px;
+  }
+}
