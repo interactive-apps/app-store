@@ -12,7 +12,7 @@ export class AppModalComponent implements OnInit {
   @Input() appId: any;
   id: any;
   private sub: any;
-  public app: Array<any>;
+  public app: any;
 
   constructor(private route: ActivatedRoute, private allAppsService: AllAppsService) { }
 
@@ -26,8 +26,6 @@ export class AppModalComponent implements OnInit {
           this.app = app;
         });
       }
-
-      // In a real app: dispatch action to load the details here.
     });
   }
 

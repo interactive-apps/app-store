@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   public apps: Array<any>;
   public appFilter: string;
   public loading: boolean;
+  public hasError: boolean;
   public appTypes= ['all categories'];
   constructor(public allAppsService: AllAppsService) {
     this.appFilter = '';
@@ -19,7 +20,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.allAppsService.all().subscribe(apps => {
       this.apps = apps;
-    });
+      this.loading = false;
+      this.hasError = false;
+    },
+      error => {
+        this.loading = false;
+        this.hasError = true;
+      });
   }
 
 }
