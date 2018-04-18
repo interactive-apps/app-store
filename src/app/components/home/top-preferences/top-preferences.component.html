@@ -1,0 +1,18 @@
+
+<div class="col-md-4" style="margin-top: 4px;">
+  <div class="card">
+    <a routerLink="apps/{{product.id}}" title="{{ product.short_description}}">
+      <div [style.backgroundColor]="product.bcolor">
+        <div id="defaultId{{ product.id }}"
+             style="padding-bottom: 10px; padding-top: 10px;">
+          <img class="card-img-top" src="{{ product.logo_url}}" alt=".." style="display: table; margin: auto; margin-bottom: 5px" height="90" width="90">
+        </div>
+      </div>
+      <div class="col-md-12" id="card-footer">
+        <h5>{{ product.name }}</h5>
+        <p>{{ product.service }}</p>
+      </div>
+    </a>
+  </div>
+</div>
+

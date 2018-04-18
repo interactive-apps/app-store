@@ -1,0 +1,133 @@
+
+<div class="container">
+  <!-- uncomment code for absolute positioning tweek see top comment in css -->
+   <!--<div class="absolute-wrapper">-->
+     <!-- Menu -->
+     <nav class="navbar navbar-default navbar-2 navbar-fixed-top">
+       <div class="navbar-header">
+         <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar bar1"></span>
+           <span class="icon-bar bar2"></span>
+           <span class="icon-bar bar3"></span>
+         </button>
+         <a routerLink="" class="navbar-brand" style="padding-top: 2px;">
+           <ul class="list-inline">
+             <li><img src="assets/img/logo.png" alt=""></li>
+             <li style="margin-left: 10px"><span style="font-weight: bolder; color: #0284CF;">Appstore</span></li>
+           </ul>
+         </a>
+       </div>
+       <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav" id="side-list">
+           <div>
+             <li><a href="#" style="font-size: 1.2em; color: #4DB0E7">Top preferences</a></li>
+           </div>
+           <div style="padding: 6px;">
+             <li><a href="#" (click)="featuredApps()"><b id="featured" class="top-preferences"><span></span> Featured</b></a></li>
+           </div>
+           <div style="padding: 6px;">
+             <li class="active"><a href="#"(click)="newAndNoteworthy()"><b id="new" class="top-preferences"><span></span>New & noteworthy</b></a></li>
+           </div>
+           <div style="margin-bottom: 40px;padding: 6px;">
+             <li><a href="#"(click)="strongInnovations()"><b id="strong" class="top-preferences"><span></span>Strong innovations</b></a></li>
+           </div>
+
+           <div>
+             <li><a href="#" style="font-size: 1.2em; color: #4DB0E7">Categories</a></li>
+           </div>
+           <div style="padding: 6px;">
+             <li><a href="#" (click)="getCategory('all')"><b id="all-cats" class="cat-list"><span></span> All</b></a></li>
+           </div>
+           <div  *ngFor="let cat of appCategories.split(',')">
+             <li style="padding: 6px;">
+               <a href="#"  id="cat-{{cat}}" class="cat-list" (click)="getCategory(cat)"><b><span></span>{{listOfAppTypes[cat]}}</b></a>
+             </li>
+           </div>
+         </ul>
+       </div>
+       <!-- /.navbar-collapse -->
+     </nav>
+     <div class="side-menu">
+       <nav class="">
+         <div class="navbar-header">
+           <!--<button id="menu-toggle1" type="button" class="navbar-toggle" data-toggle="collapse">-->
+             <!--<span class="sr-only">Toggle navigation</span>-->
+             <!--<span class="icon-bar bar1"></span>-->
+             <!--<span class="icon-bar bar2"></span>-->
+             <!--<span class="icon-bar bar3"></span>-->
+           <!--</button>-->
+           <div class="brand-name-wrapper">
+             <a routerLink="" class="navbar-brand" style="padding-top: 2px;">
+               <ul class="list-inline">
+                 <li><img src="assets/img/logo.png" alt=""></li>
+               </ul>
+             </a>
+           </div>
+         </div>
+         <div class="side-menu-container">
+           <ul class="nav navbar-nav">
+             <div style="margin-top: 20px">
+               <li><a href="#" style="font-size: 1.2em; color: #4DB0E7">Top preferences</a></li>
+             </div>
+             <div style="padding: 6px;">
+               <li><a href="#" (click)="featuredApps()"><b id="featured2" class="top-preferences"><span></span> Featured</b></a></li>
+             </div>
+             <div style="padding: 6px;">
+               <li class="active"><a href="#"(click)="newAndNoteworthy()"><b id="new2" class="top-preferences"><span></span>New & noteworthy</b></a></li>
+             </div>
+             <div style="margin-bottom: 40px;padding: 6px;">
+               <li><a href="#"(click)="strongInnovations()"><b id="strong2" class="top-preferences"><span></span>Strong innovations</b></a></li>
+             </div>
+             <div>
+               <li><a href="#" style="font-size: 1.2em; color: #4DB0E7">Categories</a></li>
+             </div>
+             <div style="padding: 6px;">
+               <li><a href="#" (click)="getCategory('all')"><b id="all-cats2" class="cat-list"><span></span> All</b></a></li>
+             </div>
+             <div  *ngFor="let cat of appCategories.split(',')">
+               <li style="padding: 6px;">
+                 <a href="#"  id="cat2-{{cat}}" class="cat-list" (click)="getCategory(cat)"><b><span></span>{{listOfAppTypes[cat]}}</b></a>
+               </li>
+             </div>
+           </ul>
+         </div>
+       </nav>
+     </div>
+   <!--</div>-->
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+    <div class="side-body">
+      <div class="title-area">
+        <h4 class="text-center"><b style="font-weight: 500;">{{ title1 }}</b>
+          <img src="assets/img/logo.png" alt=""> <b style="font-weight: 500; color: #FFD400;">appStore</b></h4>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control input-lg" [(ngModel)]="appFilter" placeholder="Search our most amazing apps">
+        </div>
+      </div>
+      <div *ngIf="appFilter === '' && listOfSelectedFeaturedApps.length !== 0">
+        <div>
+          <h5 style="text-align: center">{{ topPreferenceTitle }}</h5>
+          <app-top-preferences [product]="app"  *ngFor="let app of apps | featuredApps: [listOfSelectedFeaturedApps,appFilter]"></app-top-preferences>
+        </div>
+      </div>
+      <div *ngIf="appFilter === ''" style="margin-bottom: 25px;">
+        <div class="col-md-12" *ngFor="let category of appCategories.split(',')">
+          <div *ngFor="let cat of listOfSelected">
+            <h5 style="margin-left: 8px;" *ngIf="cat === category" id="category-title">{{ listOfAppTypes[category] }}</h5>
+          </div>
+          <app-card [product]="app"  *ngFor="let app of apps | filterApps: [listOfSelected,appFilter,category]"></app-card>
+        </div>
+      </div>
+      <div *ngIf="appFilter !== ''" style="margin-bottom: 25px;">
+        <div class="col-md-12">
+          <app-card [product]="app"  *ngFor="let app of apps | filterApps: [listOfSelected,appFilter]"></app-card>
+        </div>
+      </div>
+      <!--<pre> Resize the screen to view the left slide menu </pre>-->
+    </div>
+  </div>
+</div>
