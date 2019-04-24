@@ -1,5 +1,7 @@
 # AppStore2
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/interactive-apps/app-store.svg)](https://greenkeeper.io/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server
